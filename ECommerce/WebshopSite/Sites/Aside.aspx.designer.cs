@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Webshop.Sites {
+namespace WebshopSite.Sites {
     
     
     public partial class Aside {
         
         /// <summary>
-        /// CategoryContainer control.
+        /// ost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CategoryContainer;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ost;
     }
 }

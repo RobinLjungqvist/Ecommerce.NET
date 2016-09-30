@@ -24,7 +24,7 @@ namespace WebshopSite.Sites
                 html += $"< li >< a href = \"\" >{item} </ a ></ li>";
             }
             html += "</ul >";
-            CategoryContainer.Innerhtml = html;
+            
         }
     }
 }
