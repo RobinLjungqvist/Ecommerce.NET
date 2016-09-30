@@ -37,7 +37,7 @@ namespace WebshopSite.Sites
             }
             else
             {
-                lbl_errormsg.Text = "Zipcode isn't valid";
+                lbl_errormsg.Text = result;
             }
 
 
