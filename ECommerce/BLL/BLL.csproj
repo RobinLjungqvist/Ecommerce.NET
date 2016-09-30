@@ -43,11 +43,13 @@
     <Compile Include="BLLOrder.cs" />
     <Compile Include="BLLProduct.cs" />
     <Compile Include="BLLUser.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderProduct.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{7269ece1-122c-4ca6-9e0c-0af82d1e1888}</Project>
