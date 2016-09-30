@@ -187,6 +187,9 @@
     <Content Include="Sites\Aside.aspx" />
     <Content Include="Sites\Login.aspx" />
     <Content Include="Sites\ProductsDisplay.aspx" />
+    <Content Include="Sites\Registration.aspx" />
+    <Content Include="Sites\SingleProductDisplay.aspx" />
+    <Content Include="Style\registration.css" />
     <Content Include="Style\Stylesheet.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -264,6 +267,20 @@
     </Compile>
     <Compile Include="Sites\ProductsDisplay.aspx.designer.cs">
       <DependentUpon>ProductsDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\SingleProductDisplay.aspx.cs">
+      <DependentUpon>SingleProductDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\SingleProductDisplay.aspx.designer.cs">
+      <DependentUpon>SingleProductDisplay.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
