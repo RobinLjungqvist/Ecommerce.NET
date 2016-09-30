@@ -148,7 +148,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Images\Tröja.png" />
     <Content Include="Images\testimage.png" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -187,7 +186,8 @@
     <Content Include="Site.Master" />
     <Content Include="Sites\Login.aspx" />
     <Content Include="Sites\ProductsDisplay.aspx" />
-    <Content Include="Sites\SingleProductDisplay.aspx" />
+    <Content Include="Sites\Registration.aspx" />
+    <Content Include="Style\registration.css" />
     <Content Include="Style\Stylesheet.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -259,12 +259,12 @@
     <Compile Include="Sites\ProductsDisplay.aspx.designer.cs">
       <DependentUpon>ProductsDisplay.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Sites\SingleProductDisplay.aspx.cs">
-      <DependentUpon>SingleProductDisplay.aspx</DependentUpon>
+    <Compile Include="Sites\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Sites\SingleProductDisplay.aspx.designer.cs">
-      <DependentUpon>SingleProductDisplay.aspx</DependentUpon>
+    <Compile Include="Sites\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
