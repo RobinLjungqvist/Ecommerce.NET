@@ -40,11 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DALCategory.cs" />
     <Compile Include="DALGeneral.cs" />
-    <Compile Include="DALOrder.cs" />
-    <Compile Include="DALProduct.cs" />
-    <Compile Include="DALUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
