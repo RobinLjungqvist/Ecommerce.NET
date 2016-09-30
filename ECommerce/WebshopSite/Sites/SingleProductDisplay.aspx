@@ -28,11 +28,3 @@
         </div> 
 </div>
 </asp:Content>
-<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
-    <style type="text/css">
-        .auto-style1 {
-            width: 300px;
-            height: 300px;
-        }
-    </style>
-</asp:Content>

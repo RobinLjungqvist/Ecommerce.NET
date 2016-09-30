@@ -22,7 +22,7 @@ namespace WebshopSite.Sites
 
             productToDisplay = productList.FirstOrDefault();
 
-            lbl_productname.Text =    $"<label>{productToDisplay.name}</label>"  ;
+            lbl_productname.Text = $"<label>{productToDisplay.name}</label>";
             lbl_despcription.Text = $"<label>{productToDisplay.description}</label>";
 
             //var productToCart = productList[index];
