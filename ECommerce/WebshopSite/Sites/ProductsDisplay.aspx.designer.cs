@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebshopSites.Sites {
+namespace WebshopSite.Sites {
     
     
-    public partial class ProductDisplay {
+    public partial class ProductsDisplay {
         
         /// <summary>
         /// ProductContainer control.
