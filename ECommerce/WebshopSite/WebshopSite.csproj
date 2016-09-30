@@ -184,6 +184,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Sites\Aside.aspx" />
     <Content Include="Sites\Login.aspx" />
     <Content Include="Sites\ProductsDisplay.aspx" />
     <Content Include="Style\Stylesheet.css" />
@@ -242,6 +243,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Aside.aspx.cs">
+      <DependentUpon>Aside.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Aside.aspx.designer.cs">
+      <DependentUpon>Aside.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sites\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
