@@ -34,7 +34,7 @@ namespace Webshop.Sites
                                          $"</div>" +
                                          $"<h2><a href = \"\" > {item.name}</a></h2>" +
                                          $"<div class=\"product-carousel-price\">" +
-                                         $"<ins>{item.ppu}</ins>" +
+                                         $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
                                          $"</div>" +
 
                                          $"<div class=\"product-option-shop\">" +
