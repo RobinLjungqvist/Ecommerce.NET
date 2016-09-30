@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLLCategory.cs" />
     <Compile Include="BLLOrder.cs" />
     <Compile Include="BLLProduct.cs" />
     <Compile Include="BLLUser.cs" />
+    <Compile Include="BLLZipcode.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderProduct.cs" />
     <Compile Include="Models\Product.cs" />
