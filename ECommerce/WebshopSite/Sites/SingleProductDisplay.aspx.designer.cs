@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebshopSite.Sites
-{
-
-
-    public partial class SingleProductDisplay
-    {
-
+namespace WebshopSite.Sites {
+    
+    
+    public partial class SingleProductDisplay {
+        
         /// <summary>
         /// ProductContainer control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace WebshopSite.Sites
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProductContainer;
-
+        
         /// <summary>
         /// lbl_productname control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace WebshopSite.Sites
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_productname;
-
+        
         /// <summary>
         /// lbl_despcription control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace WebshopSite.Sites
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_despcription;
-
+        
         /// <summary>
         /// ddl_color control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace WebshopSite.Sites
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_color;
-
+        
         /// <summary>
         /// ddl_size control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace WebshopSite.Sites
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_size;
-
+        
         /// <summary>
         /// btn_buy control.
         /// </summary>

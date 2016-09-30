@@ -9,7 +9,7 @@
             
              
             <br />
-            <asp:Label ID="lbl_productname" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="lbl_productname" runat="server" Text='<%# Eval("ProductName")%>' ></asp:Label>
             <br />
             <img class="auto-style1" src="../Images/Tröja.png" /><br />
             <br />
@@ -22,7 +22,7 @@
             </asp:DropDownList>
             <br />
             <br />
-            <asp:Button ID="btn_buy" runat="server" Text="Button" />
+            <asp:Button ID="btn_buy" runat="server" Text="Add to cart" OnClick="btn_buy_Click" />
             
              
         </div> 

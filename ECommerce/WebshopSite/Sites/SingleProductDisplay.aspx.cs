@@ -26,6 +26,11 @@ namespace WebshopSite.Sites
             lbl_despcription.Text = $"<label>{productToDisplay.description}</label>";
 
             //var productToCart = productList[index];
+        } 
+
+        protected void btn_buy_Click(object sender, EventArgs e)
+        {
+
         }
 
         protected void ddl_color_SelectedIndexChanged(object sender, EventArgs e)
