@@ -29,7 +29,7 @@ namespace WebshopSite.Sites
             user.City = txtbox_city.Text;
             user.IsAdmin = false;
             user.CustomerGroup = "Normal";
-            user.ZipCode = Convert.ToInt32(txtbox_zipcode);
+            user.ZipCode = Convert.ToInt32(txtbox_zipcode.Text);
             var result = InputValidationHelper.UserIsValid(user);
             if (result == string.Empty)
             {

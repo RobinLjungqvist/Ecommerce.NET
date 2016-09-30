@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebshopSite.Sites {
+namespace WebshopSite.Sites.ProductsDisplay {
     
     
     public partial class ProductsDisplay {
