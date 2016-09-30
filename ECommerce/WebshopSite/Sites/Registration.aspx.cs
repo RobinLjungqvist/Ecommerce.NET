@@ -27,6 +27,7 @@ namespace WebshopSite.Sites
             user.LastName = txtbox_lastname.Text;
             user.StreetAdress = txtbox_streetadress.Text;
             user.City = txtbox_city.Text;
+            user.Email = txtbox_email.Text;
             user.IsAdmin = false;
             user.CustomerGroup = "Normal";
             user.ZipCode = Convert.ToInt32(txtbox_zipcode.Text);

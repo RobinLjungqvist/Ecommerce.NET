@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebshopSite.Sites.ProductsDisplay
+namespace WebshopSite.Sites
 {
     public partial class ProductsDisplay : System.Web.UI.Page
     {
@@ -44,6 +44,7 @@ namespace WebshopSite.Sites.ProductsDisplay
                                          $"</div>" +
                                          $"";
             }
+            ProductContainer.InnerHtml = html;
 
             //var productToCart = productList[index];
         }
