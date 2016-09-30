@@ -9,12 +9,12 @@ using System.Data;
 
 namespace BLL
 {
-    class BLLCategory
+    public class BLLCategory
     {
         public List<string> ReturnAllCategories()
         {
             var dal = new DALGeneral();
-            var datatable = dal.GetData("Select * from tblCategory");
+            var datatable = dal.GetData("Select Category from tblCategory");
             var stringlist = new List<string>();
             foreach (DataRow row in datatable.Rows)
             {
