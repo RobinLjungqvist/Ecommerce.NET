@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Products Display" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="ProductsDisplay.aspx.cs" Inherits="Webshop.Sites.ProductDisplay" %>
+﻿<%@ Page Title="Products Display" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="ProductsDisplay.aspx.cs" Inherits="WebshopSites.Sites.ProductDisplay" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <link href="../Style/Stylesheet.css" rel="stylesheet" />

@@ -30,9 +30,10 @@ namespace WebshopSite.Sites
             user.IsAdmin = false;
             user.CustomerGroup = "Normal";
             user.ZipCode = Convert.ToInt32(txtbox_zipcode);
-            if (InputValidationHelper.UserIsValid(user))
+            var result = InputValidationHelper.UserIsValid(user);
+            if (result == string.Empty)
             {
-
+                bll.AddUser(user);
             }
             else
             {

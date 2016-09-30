@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Webshop.Sites
+namespace WebshopSite.Sites
 {
     public partial class ProductDisplay : System.Web.UI.Page
     {

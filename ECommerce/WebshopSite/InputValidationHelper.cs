@@ -12,14 +12,27 @@ namespace WebshopSite
         public static string UserIsValid(User user)
         {
             var Result = string.Empty;
-            if
+            if (!UserNameIsValid(user.UserName))
+            {
+                Result += "The Username is taken. ";
+            }
+            if (!EmailIsValid(user.Email))
+            {
+                Result += "The E-mail is already bound to an account.";
+            }
+            if (Result == string.Empty)
+            {
+                ZipcodeIsValid(user.ZipCode);
+                CityIsValid(user.City);
+            }
 
-            return 
+            return Result;
         }
 
-        private static void ZipcodeIsValid(int zipcode)
+        private static void ZipcodeIsValid(int? zipcode)
         {
             var bll = new BLLZipcode();
+            int newZipcode = Convert.ToInt32(zipcode);
             
             foreach(var zip in bll.getZipcodes())
             {
@@ -28,7 +41,7 @@ namespace WebshopSite
                     return;
                 }
             }
-            bll.AddNewZipcode(zipcode);
+            bll.AddNewZipcode(newZipcode);
         }
         private static bool UserNameIsValid(string username)
         {
@@ -63,6 +76,19 @@ namespace WebshopSite
 
 
             return IsValid;
+        }
+        private static void CityIsValid(string city)
+        {
+            var bll = new BLLCity();
+
+            foreach (var existingCity in bll.GetCities())
+            {
+                if (existingCity == city)
+                {
+                    return;
+                }
+            }
+            bll.AddNewCity(city);
         }
     }
 }
