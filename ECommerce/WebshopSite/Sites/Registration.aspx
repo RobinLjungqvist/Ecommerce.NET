@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Register" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="WebshopSite.Sites.Register" %>
+﻿<%@ Page Title="Register" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="WebshopSite.Sites.Registration" %>
 <asp:Content ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="Style/registration.css"" type="" media="screen" />
 </asp:Content>
@@ -45,9 +45,7 @@
             <asp:Label ID="lbl_city" runat="server" Text="City:" AssociatedControlID="txtbox_city"></asp:Label>
             <asp:TextBox ID="txtbox_city" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="reqfield_city" runat="server" ControlToValidate="txtbox_city" ErrorMessage="* You must enter a city" ForeColor="Red"></asp:RequiredFieldValidator>
-            <br />
         </p>
-            <asp:Button ID="btn_register" runat="server" Text="Register" />
 
     </div>
 </asp:Content>
