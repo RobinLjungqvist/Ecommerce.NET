@@ -186,6 +186,7 @@
     <Content Include="Site.Master" />
     <Content Include="Sites\Login.aspx" />
     <Content Include="Sites\ProductsDisplay.aspx" />
+    <Content Include="Style\registration.css" />
     <Content Include="Style\Stylesheet.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />

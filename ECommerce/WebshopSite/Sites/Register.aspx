@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Register" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="WebshopSite.Sites.Register" %>
 <asp:Content ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="" type="" media="screen" />
+    <link rel="stylesheet" href="Style/registration.css"" type="" media="screen" />
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
