@@ -138,7 +138,7 @@ namespace BLL
                      $"SELECT @zipID = ZipcodeID FROM tblZipcode AS z WHERE z.Zipcode = '{user.ZipCode}';" +
                      $"SELECT @cityID = CityID FROM tblCity AS c WHERE c.City = '{user.City}';" +
                         $"SELECT @userGroupID = CustomerGroupID FROM tblCustomerGroup AS cg WHERE cg.CustomerGroup = '{user.CustomerGroup}';" +
-                         $"INSERT INTO tblUser (FirstName, LastName, Username, email, Password, StreetAdress, ZipcodeID, CityID, CustomergroupID, Admin) VALUES('{user.FirstName}', '{user.LastName}', {user.Email}, '{user.Password}', '{user.StreetAdress}', '{user.StreetAdress}', @zipID , @cityID, @userGroupID, {admin})";
+                         $"INSERT INTO tblUser (FirstName, LastName, Username, email, Password, StreetAdress, ZipcodeID, CityID, CustomergroupID, Admin) VALUES('{user.FirstName}', '{user.LastName}', '{user.Email}', '{user.Password}', '{user.StreetAdress}', '{user.StreetAdress}', @zipID , @cityID, @userGroupID, {admin})";
 
             var dal = new DALGeneral();
             string success = CreateAddString(dal.CrudData(addUser));

@@ -60,7 +60,9 @@
             </div>
         </div>
         <div class="container body-content" >
-                <asp:ContentPlaceHolder ID="AsidePlaceHolder" runat="server" />
+                <asp:ContentPlaceHolder ID="AsidePlaceHolder" runat="server">
+
+                </asp:ContentPlaceHolder>
 
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
