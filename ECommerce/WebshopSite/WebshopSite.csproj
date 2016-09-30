@@ -185,6 +185,7 @@
     <Content Include="Site.Master" />
     <Content Include="Sites\Login.aspx" />
     <Content Include="Sites\ProductsDisplay.aspx" />
+    <Content Include="Sites\Register.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -254,6 +255,13 @@
     </Compile>
     <Compile Include="Sites\ProductsDisplay.aspx.designer.cs">
       <DependentUpon>ProductsDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
