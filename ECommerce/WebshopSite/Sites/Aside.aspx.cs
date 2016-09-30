@@ -18,12 +18,12 @@ namespace WebshopSite.Sites
             string html = "";
 
             html += $"<div class=\"aside - nav\">" +
-                   "< ul >";
+                   "<ul>";
             foreach (var item in categorylist)
             {
-                html += $"< li >< a href = \"\" >{item} </ a ></ li>";
+                html += $"<li><a href = \"\">{item} </a ></li>";
             }
-            html += "</ul >";
+            html += "</ul>";
             ost.InnerHtml = html;
         }
     }
