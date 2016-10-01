@@ -18,9 +18,8 @@ namespace WebshopSite.Sites
         {
             var productToDisplay = new Product();
             var bll = new BLLProduct();
-            //NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
-            //productToDisplay.category = qscoll.Get("Category");
-            productToDisplay.name = "Robins Jeans";
+            NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
+            productToDisplay.category = qscoll.Get("Category");
 
 
 
@@ -53,16 +52,14 @@ namespace WebshopSite.Sites
             var bllCategory = new BLLCategory();
 
             var prodlist = bllCategory.ReturnAllCategories();
-            string html2   = $"<div class=\"aside\">" +
-                             $"<div class=\"col-md-2 offset-1\" id=\"CategoryContainer\" runat=\"server\">" +
+            string html2   = $"<div class=\"col-md-2 offset-1\" id=\"CategoryContainer\" runat=\"server\">" +
                              $"<div class=\"aside - nav\">" +
                              $"<ul>";
             foreach (var item in prodlist)
             {
-                html2 += $"<li><a href=\"/Sites/ProductsDisplay.aspx?Category={item.ToUpper()}\">{item}</a></li>";
+                html2 += $"<li><a href=\"/Sites/ProductsDisplay.aspx?Category={item}\">{item.ToUpper()}</a></li>";
             }
             html2 += "</ul>" +
-                                   "</div>" +
                                    "</div>" +
                                    "</div>";
             ProductContainer.InnerHtml = html;

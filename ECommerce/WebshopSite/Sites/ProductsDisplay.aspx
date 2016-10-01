@@ -4,7 +4,7 @@
 <link href="../Style/Stylesheet.css" rel="stylesheet" />
 
  <div class="row">
-        <div class="col-md-8" id="ProductContainer" runat="server">
+        <div class="col-md-12" id="ProductContainer" runat="server">
            
         </div>
 </div>
