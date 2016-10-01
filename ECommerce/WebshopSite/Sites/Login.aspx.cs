@@ -15,33 +15,39 @@ namespace WebshopSite.Sites
 		{
             if (Session["User"] != null)
             {
-                var username = txtbox_username.Text;
-                var password = txtbox_password.Text;
-                var bll = new BLLUser();
-                var user = new User();
-                var users = new List<User>();
+                Response.Redirect("~/Sites/MyAccount.aspx");
+            }
+        }
 
-                user.UserName = username;
-                user.Password = password;
+        protected void btn_login_Click(object sender, EventArgs e)
+        {
+            var username = txtbox_username.Text;
+            var password = txtbox_password.Text;
+            var bll = new BLLUser();
+            var user = new User();
+            var users = new List<User>();
 
-                users = bll.SearchUser(user);
+            user.UserName = username;
+            user.Password = password;
 
-                if (users.Count == 1)
-                {
-                    Session["User"] = users[0];
-                }
-                else
-                {
-                    txtbox_username.Text = string.Empty;
-                    txtbox_password.Text = string.Empty;
-                    lbl_loginerror.Visible = true;
-                }
+            users = bll.SearchUser(user);
 
+            if (users.Count == 1)
+            {
+                Session["User"] = users[0];
+                Response.Redirect("~/Sites/MyAccount.aspx");
             }
             else
             {
-                //Response.Redirect("~/MyAccount.aspx");
+                txtbox_username.Text = string.Empty;
+                txtbox_password.Text = string.Empty;
+                lbl_loginerror.Visible = true;
             }
         }
-	}
+
+        protected void btn_register_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Sites/Registration.aspx");
+        }
+    }
 }
