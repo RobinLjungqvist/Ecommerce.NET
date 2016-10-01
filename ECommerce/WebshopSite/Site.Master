@@ -101,6 +101,7 @@
         <div class="container-fluid body-content" >
             <div class="col-md-3">
                  <div class="aside">
+                     <div class="commentary"´></div>
             <asp:ContentPlaceHolder ID="AsideContent" runat="server">
             </asp:ContentPlaceHolder>
                      </div>
