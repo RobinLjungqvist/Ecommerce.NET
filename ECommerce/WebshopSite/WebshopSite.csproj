@@ -148,6 +148,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
     <Content Include="Images\testimage.png" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -185,7 +189,10 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="Sites\Aside.aspx" />
+    <Content Include="Sites\Contact.aspx" />
+    <Content Include="Sites\Home.aspx" />
     <Content Include="Sites\Login.aspx" />
+    <Content Include="Sites\MyAccount.aspx" />
     <Content Include="Sites\ProductsDisplay.aspx" />
     <Content Include="Sites\Registration.aspx" />
     <Content Include="Sites\SingleProductDisplay.aspx" />
@@ -256,12 +263,33 @@
     <Compile Include="Sites\Aside.aspx.designer.cs">
       <DependentUpon>Aside.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Sites\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sites\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Sites\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\MyAccount.aspx.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\MyAccount.aspx.designer.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sites\ProductsDisplay.aspx.cs">
       <DependentUpon>ProductsDisplay.aspx</DependentUpon>

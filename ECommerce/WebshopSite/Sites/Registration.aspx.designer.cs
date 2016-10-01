@@ -265,6 +265,15 @@ namespace WebshopSite.Sites {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqfield_zipcode;
         
         /// <summary>
+        /// regexpval_zip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regexpval_zip;
+        
+        /// <summary>
         /// lbl_city control.
         /// </summary>
         /// <remarks>

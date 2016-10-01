@@ -10,7 +10,7 @@
 namespace WebshopSite.Sites {
     
     
-    public partial class ProductsDisplay {
+    public partial class Contact {
         
         /// <summary>
         /// ProductContainer control.

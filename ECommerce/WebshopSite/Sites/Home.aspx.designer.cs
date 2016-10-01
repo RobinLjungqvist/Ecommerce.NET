@@ -10,15 +10,15 @@
 namespace WebshopSite.Sites {
     
     
-    public partial class ProductsDisplay {
+    public partial class Home {
         
         /// <summary>
-        /// ProductContainer control.
+        /// HomeContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProductContainer;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl HomeContainer;
     }
 }

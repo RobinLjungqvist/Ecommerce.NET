@@ -14,11 +14,11 @@ namespace WebshopSite
             var Result = string.Empty;
             if (!UserNameIsValid(user.UserName))
             {
-                Result += "The Username is taken. ";
+                Result += "* The Username is taken.\n ";
             }
             if (!EmailIsValid(user.Email))
             {
-                Result += "The E-mail is already bound to an account.";
+                Result += " * The E-mail is already bound to an account.";
             }
             if (Result == string.Empty)
             {
@@ -48,10 +48,10 @@ namespace WebshopSite
             bool IsValid = true;
             var bll = new BLLUser();
             var tempUser = new User();
-            tempUser.UserName = username.ToLower();
+            tempUser.UserName = username;
             foreach(var user in bll.SearchUser(tempUser))
             {
-                if(user.UserName.ToLower() == username)
+                if(user.UserName.ToLower() == username.ToLower())
                 {
                     IsValid = false;
                 }
