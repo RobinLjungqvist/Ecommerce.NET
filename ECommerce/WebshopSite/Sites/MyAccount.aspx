@@ -47,6 +47,7 @@
             <asp:RequiredFieldValidator ID="reqfield_city" runat="server" ControlToValidate="txtbox_city" ErrorMessage="* You must enter a city" ForeColor="Red"></asp:RequiredFieldValidator>
         </p>
                     <asp:Button ID="btn_saveChanges" runat="server" Text="Save Changes" validationgroup="information" OnClick="btn_savechanges_Click" />
+        <asp:Label ID="lbl_infoUpdateResult" runat="server"></asp:Label>
 
         <br />
                 <p>
@@ -60,6 +61,7 @@
             <asp:CompareValidator ID="compareval_password" runat="server" ControlToCompare="txtbox_password" ControlToValidate="txtbox_pwreenter" ErrorMessage="* Passwords doesn't match." ForeColor="Red" Display="Dynamic"></asp:CompareValidator>
         <br />
                     <asp:Button ID="btn_savepwchanges" runat="server" Text="Save Changes" validationgroup="password" OnClick="btn_savepwchanges_Click" />
+                    <asp:Label id="lbl_pwupdateresult" runat="server"></asp:Label>
         </p>
 
     </div>
