@@ -19,7 +19,7 @@ namespace BLL
 
             foreach (DataRow row in dt.Rows)
             {
-                var city = $"{row["Zipcode"]}";
+                var city = $"{row["City"]}";
 
                 cities.Add(city);
             }
@@ -30,7 +30,7 @@ namespace BLL
             var dal = new DALGeneral();
             var zipcodes = new List<int>();
             var sql = "INSERT INTO tblCity (City) " +
-                     $"VALUES City={city}";
+                     $"VALUES ({city})";
             var dt = dal.CrudData(sql);
         }
     }
