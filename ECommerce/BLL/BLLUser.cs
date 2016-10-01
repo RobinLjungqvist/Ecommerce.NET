@@ -11,7 +11,7 @@ namespace BLL
 {
     public class BLLUser
     {
-        List<string> count = new List<string>();
+        int count = 0;
         public List<User> SearchUser(User user)
         {
 
@@ -35,58 +35,80 @@ namespace BLL
 
             if (user.UserID != null)
             {
-                if (count.Count > 0)
-                    sql += "AND";
-                sql += $"UserID = {user.UserID}";
+                if (count > 0)
+                    sql += "AND ";
+                sql += $"UserID = {user.UserID} ";
+                count++;
             }
             if (user.FirstName != null)
             {
-                if (count.Count > 0)
-                    sql += "AND";
-                sql += $"FirstName = '{user.FirstName}'";
+                if (count > 0)
+                    sql += "AND ";
+                sql += $"FirstName = '{user.FirstName}' ";
+                count++;
 
             }
             if (user.LastName != null)
             {
-                if (count.Count > 0)
-                    sql += "AND";
-                sql += $"LastName = '{user.LastName}'";
+                if (count > 0)
+                    sql += "AND ";
+                sql += $"LastName = '{user.LastName}' ";
+                count++;
+
             }
             if (user.UserName != null)
             {
-                if (count.Count > 0)
-                    sql += "AND";
-                sql += $"Username = '{user.UserName}'";
+                if (count > 0)
+                    sql += "AND ";
+                sql += $"Username = '{user.UserName}' ";
+                count++;
+
             }
             if (user.Email != null)
             {
-                if (count.Count > 0)
-                    sql += "AND";
-                sql += $"email = '{user.Email}'";
+                if (count > 0)
+                    sql += "AND ";
+                sql += $"email = '{user.Email}' ";
+                count++;
+
+            }
+            if (user.Password != null)
+            {
+                if (count > 0)
+                    sql += "AND ";
+                sql += $"password = '{user.Password}' ";
+                count++;
+
             }
             if (user.StreetAdress != null)
             {
-                if (count.Count > 0)
-                    sql += "AND";
-                sql += $"StreetAdress = '{user.StreetAdress}'";
+                if (count > 0)
+                    sql += "AND ";
+                sql += $"StreetAdress = '{user.StreetAdress}' ";
+                count++;
+
             }
             if (user.ZipCode != null)
             {
-                if (count.Count > 0)
+                if (count > 0)
                     sql += "AND";
-                sql += $"ZipcodeID = {user.ZipCode}";
+                sql += $"ZipcodeID = {user.ZipCode} ";
+                count++;
+
             }
             if (user.City != null)
             {
-                if (count.Count > 0)
-                    sql += "AND";
-                sql += $"CityID = {user.City}";
+                if (count > 0)
+                    sql += "AND ";
+                sql += $"CityID = {user.City} ";
+                count++;
+
             }
             if (user.CustomerGroup != null)
             {
-                if (count.Count > 0)
-                    sql += "AND";
-                sql += $"CustomergroupID = {user.CustomerGroup}";
+                if (count > 0)
+                    sql += "AND ";
+                sql += $"CustomergroupID = {user.CustomerGroup} ";
             } 
 
             List<User> users = new List<User>();
@@ -100,6 +122,7 @@ namespace BLL
                     item.FirstName = $"{row["FirstName"]}";
                     item.LastName = $"{row["LastName"]}";
                     item.UserName = $"{row["Username"]}";
+                    item.Password = $"{row["Password"]}";
                     item.Email = $"{row["email"]}";
                     item.StreetAdress = $"{row["StreetAdress"]}";
                     item.ZipCode = Convert.ToInt32(row["Zipcode"]);
@@ -117,7 +140,7 @@ namespace BLL
                       $"SELECT @zipID = ZipcodeID FROM tblZipcode AS z WHERE z.Zipcode = '{user.ZipCode}';" +
                       $"SELECT @cityID = CityID FROM tblCity AS c WHERE c.City = '{user.City}';" +
                       $"SELECT @userGroupID = CustomerGroupID FROM tblCustomerGroup AS cg WHERE cg.CustomerGroup = '{user.CustomerGroup}';" + 
-                      $"UPDATE tblUser SET FirstName = '{user.FirstName}', LastName = '{user.LastName}', email = {user.Email}, Username = '{user.UserName}', Password = '{user.Password}', StreetAdress = '{user.StreetAdress}', ZipcodeID = @zipID, @cityID = CityID, CustomergroupID = @userGroupID WHERE UserID = {user.UserID}";
+                      $"UPDATE tblUser SET FirstName = '{user.FirstName}', LastName = '{user.LastName}', email = '{user.Email}', Username = '{user.UserName}', Password = '{user.Password}', StreetAdress = '{user.StreetAdress}', ZipcodeID = @zipID, @cityID = CityID, CustomergroupID = @userGroupID WHERE UserID = {user.UserID}";
             var dal = new DALGeneral();
             string success = CreateUpdateString(dal.CrudData(updateUserQuery));
             return success;

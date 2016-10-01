@@ -37,6 +37,23 @@ namespace WebshopSite.Sites
         {
             var bll = new BLLUser();
             var user = (User)Session["User"];
+            user.FirstName = txtbox_firstname.Text;
+            user.LastName = txtbox_lastname.Text;
+            user.Email = txtbox_email.Text;
+            user.StreetAdress = txtbox_streetadress.Text;
+            user.City = txtbox_city.Text;
+            user.ZipCode = Convert.ToInt32(txtbox_zipcode.Text);
+            Session["User"] = user;
+
+            bll.UpdateUser(user);
+        }
+
+        protected void btn_savepwchanges_Click(object sender, EventArgs e)
+        {
+            var bll = new BLLUser();
+            var user = (User)Session["User"];
+            user.Password = txtbox_password.Text;
+            Session["User"] = user;
             bll.UpdateUser(user);
         }
     }
