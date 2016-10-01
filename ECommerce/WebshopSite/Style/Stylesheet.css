@@ -1012,3 +1012,18 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
     padding: 20px;
     padding-top: 100px;
 }
+.header-area{
+}
+body{
+    padding: 0;
+}
+.site-branding-area{
+
+}
+.body-content{
+    padding-top:40px;
+}
+#MainContent{
+        padding-top: 25px;
+    background-color: hotpink;
+}
