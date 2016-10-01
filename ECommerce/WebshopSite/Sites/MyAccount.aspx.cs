@@ -1,4 +1,5 @@
-﻿using BLL.Models;
+﻿using BLL;
+using BLL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,8 @@ namespace WebshopSite.Sites
         {
             if(Session["User"] != null)
             {
-                var user = (User)Session["user"];
+                var user = (User)Session["User"];
+                txtbox_username.Enabled = false;
                 txtbox_username.Text = user.UserName;
                 txtbox_firstname.Text = user.FirstName;
                 txtbox_lastname.Text = user.LastName;
@@ -29,6 +31,13 @@ namespace WebshopSite.Sites
             {
                 Response.Redirect("Home.aspx");
             }
+        }
+
+        protected void btn_savechanges_Click(object sender, EventArgs e)
+        {
+            var bll = new BLLUser();
+            var user = (User)Session["User"];
+            bll.UpdateUser(user);
         }
     }
 }

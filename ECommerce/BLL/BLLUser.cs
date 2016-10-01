@@ -117,7 +117,7 @@ namespace BLL
                       $"SELECT @zipID = ZipcodeID FROM tblZipcode AS z WHERE z.Zipcode = '{user.ZipCode}';" +
                       $"SELECT @cityID = CityID FROM tblCity AS c WHERE c.City = '{user.City}';" +
                       $"SELECT @userGroupID = CustomerGroupID FROM tblCustomerGroup AS cg WHERE cg.CustomerGroup = '{user.CustomerGroup}';" + 
-                      $"UPDATE tblUser SET FirstName = '{user.FirstName}', LastName = '{user.LastName}', email = {user.Email} Username = '{user.UserName}', Password = '{user.Password}', StreetAdress = '{user.StreetAdress}', ZipcodeID = @zipID, @cityID = CityID, CustomergroupID = @userGroupID WHERE UserID = {user.UserID}";
+                      $"UPDATE tblUser SET FirstName = '{user.FirstName}', LastName = '{user.LastName}', email = {user.Email}, Username = '{user.UserName}', Password = '{user.Password}', StreetAdress = '{user.StreetAdress}', ZipcodeID = @zipID, @cityID = CityID, CustomergroupID = @userGroupID WHERE UserID = {user.UserID}";
             var dal = new DALGeneral();
             string success = CreateUpdateString(dal.CrudData(updateUserQuery));
             return success;

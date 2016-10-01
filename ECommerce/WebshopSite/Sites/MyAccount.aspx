@@ -1,7 +1,16 @@
 ﻿<%@ Page Title="My Account" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="MyAccount.aspx.cs" Inherits="WebshopSite.Sites.MyAccount" %>
 
+<asp:Content ID="accountaside" ContentPlaceHolderID="AsideContent" runat="server">
+    <div id="MyAccountNav" class="col-md-2">
+        <ul>
+            <li>Customer Details</li>
+            <li>Order History</li>
+        </ul>
+    </div>
+</asp:Content>
+
 <asp:Content ID="AccountContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="main" class="col-md-12">
+    <div id="main" class="col-md-10">
                 <h1 id="header">Customer Details</h1>
         <p>
             <asp:Label ID="lbl_errormsg" runat="server" ForeColor="Red"></asp:Label>
@@ -47,16 +56,8 @@
             <asp:RequiredFieldValidator ID="reqfield_pwreenter" runat="server" ControlToValidate="txtbox_password" ErrorMessage="* You must re-enter password." ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
             <asp:CompareValidator ID="compareval_password" runat="server" ControlToCompare="txtbox_password" ControlToValidate="txtbox_pwreenter" ErrorMessage="* Passwords doesn't match." ForeColor="Red" Display="Dynamic"></asp:CompareValidator>
         <br />
+                    <asp:Button ID="btn_savechanges" runat="server" Text="Save Changes" OnClick="btn_savechanges_Click" />
         </p>
 
-    </div>
-</asp:Content>
-
-<asp:Content ID="SideBarContent" ContentPlaceHolderID="AsideContent" runat="server">
-    <div id="MyAccountNav">
-        <ul>
-            <li>Customer Details</li>
-            <li>Order History</li>
-        </ul>
     </div>
 </asp:Content>
