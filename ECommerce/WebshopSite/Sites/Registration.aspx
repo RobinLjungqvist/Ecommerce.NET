@@ -7,7 +7,7 @@
     <div id="RegisterContent" runat="server" role="contentinfo">
         <h1 id="ost">Registration</h1>
         <p>
-            <asp:Label ID="lbl_errormsg" runat="server"></asp:Label>
+            <asp:Label ID="lbl_errormsg" runat="server" ForeColor="Red"></asp:Label>
         </p>
         <p>
             <asp:Label ID="lbl_username" runat="server" AssociatedControlID="txtbox_username" Text="Username:" CssClass="reg_lbl"></asp:Label>

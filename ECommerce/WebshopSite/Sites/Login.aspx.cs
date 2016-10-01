@@ -13,7 +13,7 @@ namespace WebshopSite.Sites
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-            if(Session["User"] != null)
+            if (Session["User"] != null)
             {
                 var username = txtbox_username.Text;
                 var password = txtbox_password.Text;
@@ -26,7 +26,7 @@ namespace WebshopSite.Sites
 
                 users = bll.SearchUser(user);
 
-                if(users.Count == 1)
+                if (users.Count == 1)
                 {
                     Session["User"] = users[0];
                 }
@@ -40,8 +40,8 @@ namespace WebshopSite.Sites
             }
             else
             {
-                Response.Redirect("~/MyAccount.aspx");
+                //Response.Redirect("~/MyAccount.aspx");
             }
-		}
+        }
 	}
 }
