@@ -15,7 +15,7 @@ namespace WebshopSite.Sites
         {
             var productToDisplay = new Product();
             var bll = new BLLProduct();
-            productToDisplay.productID = 7; // Eller det vi skickar till sidan.
+            productToDisplay.name = "Robins Jeans";
     
             var productList = bll.SearchProduct(productToDisplay);
  
