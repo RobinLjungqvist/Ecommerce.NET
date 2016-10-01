@@ -18,13 +18,21 @@ namespace WebshopSite.Sites
         {
             var productToDisplay = new Product();
             var bll = new BLLProduct();
+            var productList = new List<Product>();
             NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
-            productToDisplay.category = qscoll.Get("Category");
+            if (qscoll.Get("Category").ToLower() == "nyheter")
+            {
+                productList = bll.GetNewestProducts();
+            }
+            else
+            {
+                productToDisplay.category = qscoll.Get("Category");
+                productList = bll.SearchProduct(productToDisplay);
+            }
 
 
 
 
-            var productList = bll.SearchProduct(productToDisplay);
 
             productToDisplay = productList.FirstOrDefault();
             string html = "";

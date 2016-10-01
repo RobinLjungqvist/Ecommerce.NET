@@ -88,7 +88,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="Home.aspx">Home</a></li>
-                        <li><a href="ProductsDisplay.aspx?Category=Tröja">Products</a></li>
+                        <li><a href="ProductsDisplay.aspx?Category=Nyheter">Products</a></li>
                         <li><a href="cart.html">Cart</a></li>
                         <li><a href="checkout.html">Checkout</a></li>
                         <li><a href="#">Contact</a></li>
