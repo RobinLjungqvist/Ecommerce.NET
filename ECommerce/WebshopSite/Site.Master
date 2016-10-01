@@ -14,6 +14,7 @@
     <asp:ContentPlaceHolder runat="server" id="head" />
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Style/Stylesheet.css" rel="stylesheet" />
 
 <meta name="description" content="E-commerce School Project" />
 </head>
@@ -50,27 +51,18 @@
                     </button>
                     <a class="navbar-brand" runat="server" href="~/">Application name</a>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                </div>
+        </div>
             </div>
-        </div>
-        <div class="aside">
-
-            <asp:ContentPlaceHolder ID="AsidePlaceHolder" runat="server">
-                <h1>hello</h1>
-                </asp:ContentPlaceHolder>
-            
-        </div>
         <div class="container body-content" >
-                
+                 <div class="aside">
+
+           <div class="col-md-3" id="CategoryContainer" runat="server">
+              
+                </div>
+        
+        </div>
 
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                <h1> hello</h1>
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
