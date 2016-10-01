@@ -15,7 +15,6 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="Style/Stylesheet.css" rel="stylesheet" />
-
 <meta name="description" content="E-commerce School Project" />
 </head>
 <body role="presentation">
@@ -38,6 +37,7 @@
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
+                
             </Scripts>
         </asp:ScriptManager>
 <div class="header-area">
@@ -103,7 +103,10 @@
            <div class="col-md-2 offset-1" id="CategoryContainer" runat="server">
               <div class="aside - nav">
               <ul>
-                <li><a href=">Sites/ProductsDisplay.aspx?field1=Jeans">Jeans</a></li>
+                <li><a href="/Sites/ProductsDisplay.aspx?Category=Jeans">Jeans</a></li>
+                  <li><a href="/Sites/ProductsDisplay.aspx?Category=Tröja">Tröja</a></li>
+                  <li><a href="/Sites/ProductsDisplay.aspx?Category=Keps">Keps</a></li>
+                  <li><a href="/Sites/ProductsDisplay.aspx?Category=Jacka">Jacka</a></li>
               </ul>
              </div>
            </div>
