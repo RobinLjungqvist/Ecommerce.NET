@@ -11,7 +11,9 @@ namespace WebshopSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //lbl_test.InnerText = hidden.Value;
+            //test.InnerHtml = "<button id=\"btn\" onclick=\"Function('hej','på','dig');return false\">Add to cart </button>";
+            
         }
     }
 }

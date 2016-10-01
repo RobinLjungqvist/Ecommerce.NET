@@ -20,7 +20,10 @@ namespace WebshopSite.Sites
             var productToDisplay = new Product();
             var bll = new BLLProduct();
             
-            productToDisplay.category = Request.QueryString["field1"];
+                
+                
+                productToDisplay.category = Request.QueryString["field1"];
+            
 
            
 
@@ -107,6 +110,6 @@ namespace WebshopSite.Sites
                                             $"";
             }
             ProductContainer.InnerHtml = html;
-        }
+            }
     }
 }
