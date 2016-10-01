@@ -15,7 +15,7 @@ namespace WebshopSite.Sites
         {
             var productToDisplay = new Product();
             var bll = new BLLProduct();
-            productToDisplay.category = "Tröja";
+            productToDisplay.category = Request.QueryString["field1"];
 
            
 

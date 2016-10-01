@@ -17,6 +17,7 @@
                                 <li data-target="#slide-list" data-slide-to="0" class="active"></li>
                                 <li data-target="#slide-list" data-slide-to="1"></li>
                                 <li data-target="#slide-list" data-slide-to="2"></li>
+                                <li data-target="#slide-list" data-slide-to="3"></li>
                             </ol>                            
                         </div>
                     </div>
@@ -66,6 +67,26 @@
                 <div class="item">
                     <div class="single-slide">
                         <div class="slide-bg slide-three"></div>
+                        <div class="slide-text-wrapper">
+                            <div class="slide-text">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 col-md-offset-6">
+                                            <div class="slide-content">
+                                                <h2>We are superb</h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eius?</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptates necessitatibus dicta recusandae quae amet nobis sapiente explicabo voluptatibus rerum nihil quas saepe, tempore error odio quam obcaecati suscipit sequi.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="item">
+                    <div class="single-slide">
+                        <div class="slide-bg slide-four"></div>
                         <div class="slide-text-wrapper">
                             <div class="slide-text">
                                 <div class="container">
