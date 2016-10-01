@@ -185,6 +185,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="Sites\Aside.aspx" />
+    <Content Include="Sites\Home.aspx" />
     <Content Include="Sites\Login.aspx" />
     <Content Include="Sites\ProductsDisplay.aspx" />
     <Content Include="Sites\Registration.aspx" />
@@ -255,6 +256,13 @@
     </Compile>
     <Compile Include="Sites\Aside.aspx.designer.cs">
       <DependentUpon>Aside.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sites\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
