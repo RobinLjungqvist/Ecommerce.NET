@@ -6,15 +6,20 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Collections.Specialized;
 
 namespace WebshopSite.Sites
 {
+
     public partial class ProductsDisplay : System.Web.UI.Page
     {
+        public NameValueCollection QueryString { get; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             var productToDisplay = new Product();
             var bll = new BLLProduct();
+            
             productToDisplay.category = Request.QueryString["field1"];
 
            
