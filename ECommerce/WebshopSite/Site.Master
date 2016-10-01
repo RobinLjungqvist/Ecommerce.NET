@@ -99,20 +99,16 @@
     </div>
         <div class="row">
         <div class="container-fluid body-content" >
-            <div class="col-md-3">
                  <div class="aside">
                      <div class="commentary"´></div>
             <asp:ContentPlaceHolder ID="AsideContent" runat="server">
             </asp:ContentPlaceHolder>
                      </div>
                 </div>
-            <div class="col-md-9">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr/>
                      </div>
-             </div>
-      </div>
                     <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Leonardo, Katrina, Kevin & Robin</p>
             </footer>
