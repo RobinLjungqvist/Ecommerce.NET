@@ -5,7 +5,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div id="RegisterContent" runat="server" role="contentinfo">
-        <h1 id="ost">Registration</h1>
+        <h1 id="header">Registration</h1>
         <p>
             <asp:Label ID="lbl_errormsg" runat="server" ForeColor="Red"></asp:Label>
         </p>
