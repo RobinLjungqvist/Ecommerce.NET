@@ -4,7 +4,7 @@
 <link href="../Style/Stylesheet.css" rel="stylesheet" />
 
  <div class="row">
-        <div class="col-md-8" id="HomeContainer" runat="server">
+        <div class="col-md-12" id="HomeContainer" runat="server">
            <div class="slider-area">
         <div class="zigzag-bottom"></div>
         <div id="slide-list" class="carousel carousel-fade slide" data-ride="carousel">
