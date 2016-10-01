@@ -19,10 +19,11 @@ namespace WebshopSite.Sites
         {
             var productToDisplay = new Product();
             var bll = new BLLProduct();
-            
-            productToDisplay.category = Request.QueryString["field1"];
+            NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
+            productToDisplay.category = qscoll.Get("Category");
 
-           
+
+
 
             var productList = bll.SearchProduct(productToDisplay);
 

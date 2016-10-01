@@ -103,7 +103,10 @@
            <div class="col-md-2 offset-1" id="CategoryContainer" runat="server">
               <div class="aside - nav">
               <ul>
-                <li><a href=">Sites/ProductsDisplay.aspx?field1=Jeans">Jeans</a></li>
+                <li><a href="/Sites/ProductsDisplay.aspx?Category=Jeans">Jeans</a></li>
+                  <li><a href="/Sites/ProductsDisplay.aspx?Category=Tröja">Tröja</a></li>
+                  <li><a href="/Sites/ProductsDisplay.aspx?Category=Keps">Keps</a></li>
+                  <li><a href="/Sites/ProductsDisplay.aspx?Category=Jacka">Jacka</a></li>
               </ul>
              </div>
            </div>
