@@ -1005,6 +1005,10 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 }
 #CategoryContainer{
     float: left;
-    background-color: red;
+    padding-top: 100px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 20px;
     padding-top: 100px;
 }
