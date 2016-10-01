@@ -97,30 +97,24 @@
             </div>
         </div>
     </div>
+        <div class="row">
         <div class="container-fluid body-content" >
+            <div class="col-md-3">
                  <div class="aside">
-
-           <div class="col-md-2 offset-1" id="CategoryContainer" runat="server">
-              <div class="aside - nav">
-              <ul>
-                <li><a href="/Sites/ProductsDisplay.aspx?Category=Jeans">Jeans</a></li>
-                  <li><a href="/Sites/ProductsDisplay.aspx?Category=Tröja">Tröja</a></li>
-                  <li><a href="/Sites/ProductsDisplay.aspx?Category=Keps">Keps</a></li>
-                  <li><a href="/Sites/ProductsDisplay.aspx?Category=Jacka">Jacka</a></li>
-              </ul>
-             </div>
-           </div>
-        
-        </div>
-
+            <asp:ContentPlaceHolder ID="AsideContent" runat="server">
+            </asp:ContentPlaceHolder>
+                     </div>
+                </div>
+            <div class="col-md-9">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
+            <hr/>
+                     </div>
+             </div>
+      </div>
+                    <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Leonardo, Katrina, Kevin & Robin</p>
             </footer>
-        </div>
-
     </form>
 </body>
 </html>

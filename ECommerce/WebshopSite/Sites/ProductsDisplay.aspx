@@ -9,3 +9,12 @@
         </div>
 </div>
 </asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="AsideContent" runat="server">
+    <link href="../Style/Stylesheet.css" rel="stylesheet" />
+
+ <div class="row">
+        <div class="col-md-8" id="AsideContainer" runat="server">
+           
+        </div>
+</div>
+</asp:Content>
