@@ -46,7 +46,7 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="Sites/Home.aspx"><i class="fa fa-user"></i> My Account</a></li>
+                            <li><a href="account.html"><i class="fa fa-user"></i> My Account</a></li>
                             <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
                             <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
                             <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
@@ -87,8 +87,8 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Products</a></li>
+                        <li><a href="Home.aspx">Home</a></li>
+                        <li><a href="ProductsDisplay.aspx">Products</a></li>
                         <li><a href="cart.html">Cart</a></li>
                         <li><a href="checkout.html">Checkout</a></li>
                         <li><a href="#">Contact</a></li>
