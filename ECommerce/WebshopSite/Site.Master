@@ -15,7 +15,6 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="Style/Stylesheet.css" rel="stylesheet" />
-
 <meta name="description" content="E-commerce School Project" />
 </head>
 <body role="presentation">
@@ -38,6 +37,7 @@
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
+                
             </Scripts>
         </asp:ScriptManager>
 <div class="header-area">
