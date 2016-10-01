@@ -13,12 +13,14 @@
             <br />
             <img class="auto-style1" src="../Images/Tröja.png" /><br />
             <br />
-            <asp:Label ID="lbl_despcription" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="lbl_unitinstock" runat="server">[lbl_unitinstock]</asp:Label>
+            <br />
+            <asp:Label ID="lbl_despcription" runat="server"></asp:Label>
             <br />
             <br />
             <asp:DropDownList ID="ddl_color" runat="server" OnSelectedIndexChanged="ddl_color_SelectedIndexChanged">
             </asp:DropDownList>
-            <asp:DropDownList ID="ddl_size" runat="server">
+            <asp:DropDownList ID="ddl_size" runat="server" >
             </asp:DropDownList>
             <br />
             <br />
