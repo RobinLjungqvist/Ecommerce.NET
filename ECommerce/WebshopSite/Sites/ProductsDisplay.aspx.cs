@@ -20,7 +20,12 @@ namespace WebshopSite.Sites
             var bll = new BLLProduct();
             var productList = new List<Product>();
             NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
-            if (qscoll.Get("Category").ToLower() == "nyheter")
+            if(string.IsNullOrEmpty(Request.QueryString["Category"]))
+            {
+                productList = bll.GetNewestProducts();
+
+            }
+            else if (qscoll.Get("Category").ToLower() == "nyheter" || qscoll == null)
             {
                 productList = bll.GetNewestProducts();
             }

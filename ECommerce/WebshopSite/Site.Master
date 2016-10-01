@@ -101,14 +101,14 @@
         <div class="container-fluid body-content" >
                  <div class="aside">
                      <div class="commentary"´></div>
-            <asp:ContentPlaceHolder ID="AsideContent" runat="server">
-            </asp:ContentPlaceHolder>
-                     </div>
-                </div>
+                   <asp:ContentPlaceHolder ID="AsideContent" runat="server">
+                   </asp:ContentPlaceHolder>
+                 </div>
+        </div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr/>
-                     </div>
+             </div>
                     <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Leonardo, Katrina, Kevin & Robin</p>
             </footer>
