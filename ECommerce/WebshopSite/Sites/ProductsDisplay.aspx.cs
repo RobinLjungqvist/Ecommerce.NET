@@ -13,7 +13,6 @@ namespace WebshopSite.Sites
 
     public partial class ProductsDisplay : System.Web.UI.Page
     {
-        public NameValueCollection QueryString { get; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -38,7 +37,7 @@ namespace WebshopSite.Sites
                                          $"<div class=\"product-upper\">" +
                                          $"<img src = \"../Images/testimage.png\" alt=\"image\">" +
                                          $"</div>" +
-                                         $"<h2><a href = \"\" > {item.name}</a></h2>" +
+                                         $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name}</a></h2>" +
                                          $"<div class=\"product-carousel-price\">" +
                                          $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
                                          $"</div>" +

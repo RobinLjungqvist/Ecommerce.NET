@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Collections.Specialized;
 
 namespace WebshopSite.Sites
 {
@@ -15,8 +16,9 @@ namespace WebshopSite.Sites
         {
             var productToDisplay = new Product();
             var bll = new BLLProduct();
-            productToDisplay.name = "Robins Jeans";
-    
+            NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
+            productToDisplay.productID = Convert.ToInt32(qscoll.Get("ProductID"));
+
             var productList = bll.SearchProduct(productToDisplay);
  
             productToDisplay = productList.FirstOrDefault();
