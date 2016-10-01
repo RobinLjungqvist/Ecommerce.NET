@@ -45,20 +45,6 @@ namespace WebshopSite.Sites
                                          $"";
             }
             ProductContainer.InnerHtml = html;
-
-            //var productToCart = productList[index];
-            var categorybll = new BLLCategory();
-            var categorylist = categorybll.ReturnAllCategories();
-            string html2 = "";
-
-            html += $"<div class=\"aside - nav\">" +
-                   "<ul>";
-            foreach (var item in categorylist)
-            {
-                html2 += $"<li><a href = \"\">{item} </a ></li>";
-            }
-            html += "</ul>";
-            ost.InnerHtml = html2;
         }
     }
 }
