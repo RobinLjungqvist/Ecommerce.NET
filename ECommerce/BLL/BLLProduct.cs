@@ -172,6 +172,51 @@ namespace BLL
             string success = CreateAddString(dal.CrudData(addstring));
             return success;
         }
+        public List<Product> GetNewestProducts()
+        {
+            string sql =
+              "SELECT TOP 8 " +
+              "prod.ProductID, " +
+              "prod.ProductName, " +
+              "category.Category, " +
+              "size.Size, " +
+              "color.Color, " +
+              "brand.Brand, " +
+              "prod.Description, " +
+              "prod.PricePerUnit, " +
+              "prod.UnitsInStock, " +
+              "prod.PictureID " +
+              "from tblProduct AS prod ";
+
+            sql += "INNER JOIN tblCategory AS category ON prod.CategoryID = category.CategoryID " +
+                "INNER JOIN tblColor AS color ON color.ColorID = prod.ColorID " +
+                "INNER JOIN tblSize AS size ON size.SizeID = prod.SizeID " +
+                "INNER JOIN tblBrand AS brand ON brand.BrandID = prod.BrandID ORDER BY ProductID DESC ";
+
+
+            List<Product> products = new List<Product>();
+            var dal = new DALGeneral();
+            var dataTable = dal.GetData(sql);
+
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Product item = new Product();
+                item.productID = Convert.ToInt32(row["ProductID"]);
+                item.name = $"{row["ProductName"]}";
+                item.category = $"{row["Category"]}";
+                item.size = $"{row["Size"]}";
+                item.Color = $"{row["Color"]}";
+                item.brand = $"{row["Brand"]}";
+                item.description = $"{row["Description"]}";
+                item.ppu = Convert.ToDecimal(row["PricePerUnit"]);
+                item.unitsInStock = Convert.ToInt32(row["UnitsInStock"]);
+                item.picture = $"{row["PictureID"]}";
+                products.Add(item);
+            }
+
+            return products;
+        }
         private string CreateDeleteString(int affectedrows)
         {
             if (affectedrows > 0)
