@@ -25,15 +25,21 @@ namespace WebshopSite.Sites
              
             lbl_productname.Text = $"<label>{productToDisplay.name}</label>";
             lbl_despcription.Text = $"<label>Description: {productToDisplay.description}</label>";
-            lbl_unitinstock.Text =  $"<label>Unit In Stock: {productToDisplay.unitsInStock}</label";
-            
-            
+            lbl_unitinstock.Text = $"<label>Unit In Stock: {productToDisplay.unitsInStock}</label";
+
+
             foreach (var item in productList)
             {
-                ddl_size.Items.Add(item.size);
-                ddl_color.Items.Add(item.Color); 
+                if (item.productID == productToDisplay.productID)
+                {
+                    ddl_color.Items.Add(item.Color); 
+                }
+                if (ddl_color.SelectedValue == item.Color)
+                {
+                    ddl_size.Items.Add(item.size);
+
+                }
             }
-             
 
 
 
