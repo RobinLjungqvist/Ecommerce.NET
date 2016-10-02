@@ -100,7 +100,6 @@
         <div class="row">
         <div class="container-fluid body-content" >
                  <div class="aside">
-                     <div class="commentary"´></div>
                    <asp:ContentPlaceHolder ID="AsideContent" runat="server">
                    </asp:ContentPlaceHolder>
                  </div>
