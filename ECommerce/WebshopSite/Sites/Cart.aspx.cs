@@ -16,12 +16,12 @@ namespace WebshopSite.Sites
         {
             string html = "";
             var bllproduct = new BLLProduct();
-            List<int> productIDs = (List<int>)Session["Cart"];
+            var orderProds = (List<OrderProduct>)Session["Cart"];
             List<Product> products = new List<Product>();
-            foreach (var item in productIDs)
+            foreach (var item in orderProds)
             {
                 Product product = new Product();
-                product.productID = item;
+                product.productID = item.ProductID;
                 var templist = bllproduct.SearchProduct(product);
                 foreach (var x in templist)
                 {
@@ -30,27 +30,35 @@ namespace WebshopSite.Sites
             }
 
 
-            foreach (var item in products)
+            foreach (var item in orderProds)
             {
-                html += $"<div class\"row\">" +
-                                            $"<div class=\"col-md-10 col-md-offset-2 productdisplay\">" +
-                                            $"<div class=\"single-shop-product\">" +
-                                            $"<div class=\"product-upper\">" +
-                                            $"<img src = \"../Images/testimage.png\" alt=\"image\">" +
-                                            $"</div>" +
-                                            $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name}</a></h2>" +
-                                            $"<div class=\"product-carousel-price\">" +
-                                            $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
-                                            $"</div>" +
-
-                                            $"<div class=\"product-option-shop\">" +
-                                            $"<a class=\"add_to_cart_button\" data-quantity=\"1\" data-product_sku=\"\" data-product_id=\"70\" rel=\"nofollow\" href=\"ProductsDisplay.aspx?Category={item.category}&AddToCart={item.productID}\">Add to cart</a>" +
-                                            $"</div>" +
-                                            $"</div>" +
-                                            $"</div>" +
-                                            $"</div>" +
-                                            $"";
+                html += $"<tbody>" +
+                                        $"<tr class=\"cart_item\">" +
+                                           $" <td class=\"product-remove\">" +
+                                                $"<a title=\"Remove this item\" class=\"remove\" href=\"#\">×</a>" +
+                                            $"</td>" +
+                                            $"<td class=\"product-thumbnail\">" +
+                                               $"<a href=\"single-product.html\"><img width=\"145\" height=\"145\" alt=\"poster_1_up\" class=\"shop_thumbnail\" src=\"./Images/testimage.png\" ></a>" +
+                                            $"</td>" +
+                                            $"<td class=\"product-name\">" +
+                                                $"<a href=\"single-product.html\">{item.ProductName}</a>" +
+                                            $"</td>" +
+                                            $"<td class=\"product-price\">" +
+                                                $"<span class=\"amount\">£15.00</span>" +
+                                            $"</td>" +
+                                            $"<td class=\"product-quantity\">" +
+                                                $"<div class=\"quantity buttons_added\">" +
+                                                    $"<input type=\"button\" class=\"minus\" value=\"-\">" +
+                                                    $"<input type=\"number\" size=\"4\" class=\"input-text qty text\" title=\"Qty\" value=\"{item.Quantity}\" min=\"0\" step=\"1\">" +
+                                                    $"<input type=\"button\" class=\"plus\" value=\"+\">" +
+                                                $"</div>" +
+                                            $"</td>" +
+                                            $"<td class=\"product-subtotal\">" +
+                                                $"<span class=\"amount\">{item.Price * item.Quantity}</span>" +
+                                            $"</td>" +
+                                    $"</tbody>";
             }
+            CartContainer.InnerHtml = html;
         }
     }
 }

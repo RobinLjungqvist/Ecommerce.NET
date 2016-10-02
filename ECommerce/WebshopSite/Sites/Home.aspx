@@ -93,7 +93,7 @@
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-6">
                                             <div class="slide-content">
-                                                <h2>We are superb</h2>
+                                                <h2>We are extraordinary</h2>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eius?</p>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptates necessitatibus dicta recusandae quae amet nobis sapiente explicabo voluptatibus rerum nihil quas saepe, tempore error odio quam obcaecati suscipit sequi.</p>
                                             </div>
