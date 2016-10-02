@@ -6,6 +6,8 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using BLL;
+using BLL.Models;
 
 namespace WebshopSite
 {
@@ -19,7 +21,7 @@ namespace WebshopSite
         }
         void Session_Start(object sender, EventArgs e)
         {
-            Session["Cart"] = new Dictionary<int,int>();
+            Session["Cart"] = new List<OrderProduct>();
         }
     }
 }

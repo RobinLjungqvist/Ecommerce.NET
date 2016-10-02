@@ -68,8 +68,20 @@ namespace WebshopSite.Sites
             }
             if (!string.IsNullOrEmpty(Request.QueryString["AddToCart"]))
             {
-                var cart = (Dictionary<int, int>)Session["Cart"];
-                //cart.Add(addToCartID, Convert.ToInt32(item.ppu));
+                var cart = (List<OrderProduct>)Session["Cart"];
+                var anotherprod = new OrderProduct();
+                anotherprod.ProductID = addToCartID;
+                var anotherprodagian = new Product();
+                anotherprodagian.productID = anotherprod.ProductID; 
+                var anotherprodlist = bll.SearchProduct(anotherprodagian);
+                foreach (var item in anotherprodlist)
+                {
+                    
+                    anotherprod.Price  = Convert.ToInt32(item.ppu);
+                    anotherprod.ProductName = item.name;
+                    anotherprod.Quantity++;
+                    cart.Add(anotherprod);
+                }
             }
 
             var bllCategory = new BLLCategory();
