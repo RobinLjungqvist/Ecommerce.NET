@@ -38,13 +38,13 @@ namespace WebshopSite.Sites
                                                 $"<a title=\"Remove this item\" class=\"remove\" href=\"#\">×</a>" +
                                             $"</td>" +
                                             $"<td class=\"product-thumbnail\">" +
-                                               $"<a href=\"single-product.html\"><img width=\"145\" height=\"145\" alt=\"poster_1_up\" class=\"shop_thumbnail\" src=\"./Images/testimage.png\" ></a>" +
+                                               $"<a href=\"single-product.html\"><img width=\"145\" height=\"145\" alt=\"poster_1_up\" class=\"shop_thumbnail\" src=\"../Images/testimage.png\" ></a>" +
                                             $"</td>" +
                                             $"<td class=\"product-name\">" +
                                                 $"<a href=\"single-product.html\">{item.ProductName}</a>" +
                                             $"</td>" +
                                             $"<td class=\"product-price\">" +
-                                                $"<span class=\"amount\">£15.00</span>" +
+                                                $"<span class=\"amount\">{item.Price}</span>" +
                                             $"</td>" +
                                             $"<td class=\"product-quantity\">" +
                                                 $"<div class=\"quantity buttons_added\">" +
