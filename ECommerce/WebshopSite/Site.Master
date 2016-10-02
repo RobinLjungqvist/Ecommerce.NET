@@ -47,7 +47,7 @@
                     <div class="user-menu">
                         <ul>
                             <li><a href="account.html"><i class="fa fa-user"></i> My Account</a></li>
-                            <li><a href="Cart.aspx"><i class="fa fa-user"></i> My Cart</a></li>
+                            <li><a href="Cart.aspx"><i class="fa fa-user"></i>My Cart</a></li>
                             <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
                             <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
                         </ul>
