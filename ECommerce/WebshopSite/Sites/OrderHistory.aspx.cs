@@ -27,27 +27,37 @@ namespace WebshopSite.Sites
         private string GetOrderHtml(List<Order> orders)
         {
             var sb = new StringBuilder();
-            sb.Append("<div class=\"ordercontainer\">");
-
-            sb.Append("</div>");
+            sb.Append("<div class=\"\">" +
+                      "<table style=\"width:70%\" class=\"shop_table cart\">");
+              
 
             foreach (var order in orders)
             {
                 var htmlOrder =
-                    "<div class=\"order\">" +
-                   $"Order: {order.OrderID}, {order.Orderdate}, {order.TotalPrice} " +
-                    "</div>";
+                      "<tr class=\"orderhead\"> " +
+                      "<td>OrderID</td>" +
+                      "<td>Order Date</td>" +
+                      "<td>Total Price</td>" +
+                      "<td>Show Products</td>" +
+                      "</tr>" +
+                "<tr >" +
+                   $"<td> {order.OrderID}</td><td> {order.Orderdate}</td><td> {Convert.ToDecimal(order.TotalPrice)} kr</td><td> <a hred=\"\" onclick=\"ShowProducts('{order.OrderID}'); return false\">Show</button> </td>" +
+                    "</tr>";
+
+
+
                 sb.Append(htmlOrder);
+                sb.Append("<tr id=\"prodhead\" class=\"prodhead\" style=\"display:none\"><td>Product ID</td><td>Product name</td><td>Quantity ID</td><td>Unit Price</td></tr>");
                 foreach (var product in order.Products)
                 {
                     var htmlProduct =
-                        "<div class=\"product\">" +
-                       $"Prod ID {product.ProductID}, <a href=\"SingleProductDisplay.aspx?ProductID={product.ProductID}\">{product.ProductName}</a> Quantity: {product.Quantity}, Product price {product.Price}" +
-                        "</div>";
+                        $"<tr id=\"prodid{order.OrderID}\" class=\"productrow\" style=\"display:none\">" +
+                       $"<td>{product.ProductID}</td><td><a href=\"SingleProductDisplay.aspx?ProductID={product.ProductID}\">{product.ProductName}</a></td><td> {product.Quantity}</td><td> {Convert.ToDecimal(product.Price)} kr </td>" +
+                        "</tr>";
                     sb.Append(htmlProduct);
                 }
             }
-            sb.Append("</div>");
+            sb.Append("</table></div>");
             return sb.ToString();
         }
         protected void btn_logout_Click(object sender, EventArgs e)

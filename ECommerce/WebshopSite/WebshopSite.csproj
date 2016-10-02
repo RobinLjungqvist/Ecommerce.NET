@@ -199,8 +199,6 @@
     <Content Include="Sites\ProductsDisplay.aspx" />
     <Content Include="Sites\Registration.aspx" />
     <Content Include="Sites\SingleProductDisplay.aspx" />
-    <Content Include="Style\masterpagestyle.css" />
-    <Content Include="Style\registration.css" />
     <Content Include="Style\Stylesheet.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />

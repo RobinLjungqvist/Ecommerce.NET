@@ -1015,6 +1015,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 }
 .header-area{
 }
+/*Vår egna css*/
 body{
     padding: 0;
 }
@@ -1031,4 +1032,16 @@ body{
 .AsideContent{
     padding : 100px;
     background-color: hotpink;
+}
+
+/*orderhistory css*/
+
+.prodhead td{
+    font-weight: bold;
+    background-color: rgba(26, 188, 156, 0.24);
+
+}
+.orderhead td{
+    font-weight: bold;
+    background-color: #1abc9c;
 }
