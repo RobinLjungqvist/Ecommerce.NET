@@ -11,7 +11,19 @@
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
         <script type="text/javascript">
-
+            function ShowProducts(id) {
+                elements = document.getElementsByClassName('hiddentable');
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].style.display = "none";
+                }
+                element = document.getElementById('prodid' + id);
+                element.style.display = 'table-row';
+                element2 = document.getElementById('prodheadid' + id);
+                element2.style.display = 'table-row';
+                orderrow = document.getElementById('orderrow' + id);
+                //orderrow.style.background-color = '#41bfa6';
+            }
+            
         </script>
     <div id="orderhistorycontent" class="col-md-10" runat="server">
 
