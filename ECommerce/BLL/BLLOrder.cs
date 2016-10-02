@@ -190,10 +190,6 @@ namespace BLL
                 dal.CrudData(sql);
             }
         }
-        private void GetOrderID(Order order)
-        {
-
-        }
     }
 
 }
