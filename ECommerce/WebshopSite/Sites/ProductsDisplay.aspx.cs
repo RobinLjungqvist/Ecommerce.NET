@@ -64,7 +64,13 @@ namespace WebshopSite.Sites
                                                 $"</div>" +
                                                 $"</div>" +
                                                 $"";
+                if (!string.IsNullOrEmpty(Request.QueryString["AddToCart"]))
+                {
+                    var cart = (Dictionary<int,int>)Session["Cart"];
+                    cart.Add(addToCartID,Convert.ToInt32(item.ppu));
                 }
+
+            }
 
             var bllCategory = new BLLCategory();
 
