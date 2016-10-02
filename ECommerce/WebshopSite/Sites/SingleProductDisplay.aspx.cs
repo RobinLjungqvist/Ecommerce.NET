@@ -18,7 +18,10 @@ namespace WebshopSite.Sites
             var bll = new BLLProduct();
             NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
             productToDisplay.productID = Convert.ToInt32(qscoll.Get("ProductID"));
-
+            if (string.IsNullOrEmpty(Request.QueryString["ProductID"]))
+            {
+                productToDisplay.productID = 2;
+            }
             var productList = bll.SearchProduct(productToDisplay);
  
             productToDisplay = productList.FirstOrDefault();

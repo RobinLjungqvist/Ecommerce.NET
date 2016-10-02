@@ -17,5 +17,9 @@ namespace WebshopSite
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+        void Session_Start(object sender, EventArgs e)
+        {
+            Session["Cart"] = new Dictionary<int,int>();
+        }
     }
 }

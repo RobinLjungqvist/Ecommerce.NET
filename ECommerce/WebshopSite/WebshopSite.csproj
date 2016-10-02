@@ -190,6 +190,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="Sites\Aside.aspx" />
+    <Content Include="Sites\Cart.aspx" />
     <Content Include="Sites\Contact.aspx" />
     <Content Include="Sites\Home.aspx" />
     <Content Include="Sites\Login.aspx" />
@@ -265,6 +266,13 @@
     </Compile>
     <Compile Include="Sites\Aside.aspx.designer.cs">
       <DependentUpon>Aside.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sites\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
