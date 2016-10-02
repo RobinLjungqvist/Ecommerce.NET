@@ -3,8 +3,9 @@
 <asp:Content ID="accountaside" ContentPlaceHolderID="AsideContent" runat="server">
     <div id="MyAccountNav" class="col-md-2">
         <ul>
-            <li>Customer Details</li>
-            <li>Order History</li>
+            <li><a href="~/Sites/MyAccount.aspx">Details</a></li>
+            <li><a href="~/Sites/OrderHistory.aspx">Order History</a></li>
+            <li><asp:LinkButton ID="btn_logout" runat="server" OnClick="btn_logout_Click">Logout</asp:LinkButton></li>
         </ul>
     </div>
 </asp:Content>

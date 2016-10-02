@@ -2,9 +2,13 @@
 <asp:Content ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="../Style/registration.css" media="screen" />
 </asp:Content>
+<asp:Content ID="AsideQFL" ContentPlaceHolderID="AsideContent" runat="server">
+    <div id="MyAccountNav" class="col-md-2">
 
+    </div>
+</asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="RegisterContent" runat="server" role="contentinfo">
+    <div id="RegisterContent" runat="server" role="contentinfo" class="col-md-10">
         <h1 id="header">Registration</h1>
         <p>
             <asp:Label ID="lbl_errormsg" runat="server" ForeColor="Red"></asp:Label>

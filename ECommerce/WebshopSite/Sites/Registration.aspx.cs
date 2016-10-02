@@ -35,6 +35,7 @@ namespace WebshopSite.Sites
             if (result == string.Empty)
             {
                 bll.AddUser(user);
+                Response.Redirect("~/Sites/Login.aspx");
             }
             else
             {

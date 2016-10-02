@@ -61,5 +61,11 @@ namespace WebshopSite.Sites
             var result= bll.UpdateUser(user);
             lbl_pwupdateresult.Text = result;
         }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            Session.Remove("User");
+            Response.Redirect("~/Sites/Home.aspx");
+        }
     }
 }
