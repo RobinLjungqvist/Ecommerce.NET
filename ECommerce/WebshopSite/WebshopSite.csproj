@@ -194,6 +194,7 @@
     <Content Include="Sites\Home.aspx" />
     <Content Include="Sites\Login.aspx" />
     <Content Include="Sites\MyAccount.aspx" />
+    <Content Include="Sites\OrderHistory.aspx" />
     <Content Include="Sites\ProductsDisplay.aspx" />
     <Content Include="Sites\Registration.aspx" />
     <Content Include="Sites\SingleProductDisplay.aspx" />
@@ -292,6 +293,13 @@
     </Compile>
     <Compile Include="Sites\MyAccount.aspx.designer.cs">
       <DependentUpon>MyAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sites\ProductsDisplay.aspx.cs">
       <DependentUpon>ProductsDisplay.aspx</DependentUpon>
