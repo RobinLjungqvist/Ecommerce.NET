@@ -42,7 +42,7 @@ namespace WebshopSite.Sites
                 {
                     var htmlProduct =
                         "<div class=\"product\">" +
-                       $"Prod ID {product.ProductID}, <a href=\"SingleProductDisplay.aspx?ID={product.ProductID}\">{product.ProductName}</a> Quantity: {product.Quantity}, Product price {product.Price}" +
+                       $"Prod ID {product.ProductID}, <a href=\"SingleProductDisplay.aspx?ProductID={product.ProductID}\">{product.ProductName}</a> Quantity: {product.Quantity}, Product price {product.Price}" +
                         "</div>";
                     sb.Append(htmlProduct);
                 }
