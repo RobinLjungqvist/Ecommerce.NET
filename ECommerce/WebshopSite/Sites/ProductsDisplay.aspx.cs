@@ -39,10 +39,10 @@ namespace WebshopSite.Sites
                 productList = bll.SearchProduct(productToDisplay);
                 category = qscoll.Get("Category");
             }
+
             if (!string.IsNullOrEmpty(Request.QueryString["AddToCart"]))
             {
                 addToCartID = Convert.ToInt32(qscoll.Get("AddToCart"));
-
             }
             string html = "";
 
