@@ -30,7 +30,7 @@ namespace BLL
             var dal = new DALGeneral();
             var zipcodes = new List<int>();
             var sql = "INSERT INTO tblCity (City) " +
-                     $"VALUES ({city})";
+                     $"VALUES ('{city}')";
             var dt = dal.CrudData(sql);
         }
     }

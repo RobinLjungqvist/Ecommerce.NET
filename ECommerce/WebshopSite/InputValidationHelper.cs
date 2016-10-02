@@ -24,6 +24,7 @@ namespace WebshopSite
             {
                 ZipcodeIsValid(user.ZipCode);
                 CityIsValid(user.City);
+                user.StreetAdress = FirstLetterToUpperCase(user.StreetAdress);
             }
 
             return Result;
@@ -83,12 +84,30 @@ namespace WebshopSite
 
             foreach (var existingCity in bll.GetCities())
             {
-                if (existingCity == city)
+                if (existingCity.ToLower() == city.ToLower())
                 {
                     return;
                 }
             }
+            city = FirstLetterToUpperCase(city);
             bll.AddNewCity(city);
+        }
+        public static string FirstLetterToUpperCase(string input)
+        {
+            var array = input.ToArray();
+            var formattedInput = string.Empty;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (i > 0)
+                {
+                    formattedInput += array[i];
+                }
+                else
+                {
+                    formattedInput += array[i].ToString().ToUpper();
+                }
+            }
+            return formattedInput;
         }
     }
 }

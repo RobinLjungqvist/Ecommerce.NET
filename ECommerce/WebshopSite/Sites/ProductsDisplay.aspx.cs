@@ -77,6 +77,7 @@ namespace WebshopSite.Sites
             var prodlist = bllCategory.ReturnAllCategories();
             string html2   = $"<div class=\"col-md-2 offset-1\" id=\"CategoryContainer\" runat=\"server\">" +
                              $"<div class=\"aside - nav\">" +
+                             $"<h2 id=\"categoryheader\">Categories</h2>" +
                              $"<ul>";
             foreach (var item in prodlist)
             {
