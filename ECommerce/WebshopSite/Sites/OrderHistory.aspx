@@ -16,12 +16,19 @@
                 for (var i = 0; i < elements.length; i++) {
                     elements[i].style.display = "none";
                 }
+
+                orderrowcolor = document.getElementsByClassName('corderrow');
+                for (var i = 0; i < orderrowcolor.length; i++) {
+                    orderrowcolor[i].style.backgroundColor = '#d2dee2';
+                }
+
+
                 element = document.getElementById('prodid' + id);
                 element.style.display = 'table-row';
                 element2 = document.getElementById('prodheadid' + id);
                 element2.style.display = 'table-row';
                 orderrow = document.getElementById('orderrow' + id);
-                //orderrow.style.background-color = '#41bfa6';
+                orderrow.style.backgroundColor = '#378172';
             }
             
         </script>
