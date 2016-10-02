@@ -19,49 +19,53 @@ namespace WebshopSite.Sites
             var productToDisplay = new Product();
             var bll = new BLLProduct();
             var productList = new List<Product>();
+            int addToCartID = 0;
+            string category = "";
             NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
             if(string.IsNullOrEmpty(Request.QueryString["Category"]))
             {
                 productList = bll.GetNewestProducts();
+                category = "nyheter";
 
             }
             else if (qscoll.Get("Category").ToLower() == "nyheter" || qscoll == null)
             {
                 productList = bll.GetNewestProducts();
+                category = qscoll.Get("Category");
             }
             else
             {
                 productToDisplay.category = qscoll.Get("Category");
                 productList = bll.SearchProduct(productToDisplay);
+                category = qscoll.Get("Category");
             }
+            if (!string.IsNullOrEmpty(Request.QueryString["AddToCart"]))
+            {
+                addToCartID = Convert.ToInt32(qscoll.Get("AddToCart"));
 
-
-
-
-
-            productToDisplay = productList.FirstOrDefault();
+            }
             string html = "";
 
+                foreach (var item in productList)
+                {
+                    html += $"<div class=\"col-md-3 col-sm-6 productdisplay\">" +
+                                                $"<div class=\"single-shop-product\">" +
+                                                $"<div class=\"product-upper\">" +
+                                                $"<img src = \"../Images/testimage.png\" alt=\"image\">" +
+                                                $"</div>" +
+                                                $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name}</a></h2>" +
+                                                $"<div class=\"product-carousel-price\">" +
+                                                $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
+                                                $"</div>" +
 
-            foreach (var item in productList)
-            {
-             html +=   $"<div class=\"col-md-3 col-sm-6 productdisplay\">" +
-                                         $"<div class=\"single-shop-product\">" +
-                                         $"<div class=\"product-upper\">" +
-                                         $"<img src = \"../Images/testimage.png\" alt=\"image\">" +
-                                         $"</div>" +
-                                         $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name}</a></h2>" +
-                                         $"<div class=\"product-carousel-price\">" +
-                                         $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
-                                         $"</div>" +
+                                                $"<div class=\"product-option-shop\">" +
+                                                $"<a class=\"add_to_cart_button\" data-quantity=\"1\" data-product_sku=\"\" data-product_id=\"70\" rel=\"nofollow\" href=\"ProductsDisplay.aspx?Category={category}&AddToCart={item.productID}\">Add to cart</a>" +
+                                                $"</div>" +
+                                                $"</div>" +
+                                                $"</div>" +
+                                                $"";
+                }
 
-                                         $"<div class=\"product-option-shop\">" +
-                                         $"<a class=\"add_to_cart_button\" data-quantity=\"1\" data-product_sku=\"\" data-product_id=\"70\" rel=\"nofollow\" href=\"/canvas/shop/?add-to-cart=70\">Add to cart</a>" +
-                                         $"</div>" +
-                                         $"</div>" +
-                                         $"</div>" +
-                                         $"";
-            }
             var bllCategory = new BLLCategory();
 
             var prodlist = bllCategory.ReturnAllCategories();
