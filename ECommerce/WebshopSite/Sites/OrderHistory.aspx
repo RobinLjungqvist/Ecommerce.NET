@@ -28,7 +28,7 @@
                 element2 = document.getElementById('prodheadid' + id);
                 element2.style.display = 'table-row';
                 orderrow = document.getElementById('orderrow' + id);
-                orderrow.style.backgroundColor = '#378172';
+                orderrow.style.backgroundColor = '#00ebbd';
             }
             
         </script>
