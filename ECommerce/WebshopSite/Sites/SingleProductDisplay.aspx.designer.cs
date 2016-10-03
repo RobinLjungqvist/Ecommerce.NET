@@ -13,6 +13,15 @@ namespace WebshopSite.Sites {
     public partial class SingleProductDisplay {
         
         /// <summary>
+        /// AsideContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AsideContainer;
+        
+        /// <summary>
         /// ProductContainer control.
         /// </summary>
         /// <remarks>

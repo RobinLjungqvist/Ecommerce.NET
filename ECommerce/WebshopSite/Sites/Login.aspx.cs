@@ -17,6 +17,9 @@ namespace WebshopSite.Sites
             {
                 Response.Redirect("~/Sites/MyAccount.aspx");
             }
+            var bll = new BLLCategory();
+            var categories = bll.ReturnAllCategories();
+            LoginNav.InnerHtml = HtmlGenerator.GetCategorySidebarHtml(categories);
         }
 
         protected void btn_login_Click(object sender, EventArgs e)

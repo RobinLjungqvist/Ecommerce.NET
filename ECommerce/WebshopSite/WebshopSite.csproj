@@ -191,6 +191,7 @@
     <Content Include="Site.Master" />
     <Content Include="Sites\Aside.aspx" />
     <Content Include="Sites\Cart.aspx" />
+    <Content Include="Sites\Checkout.aspx" />
     <Content Include="Sites\Contact.aspx" />
     <Content Include="Sites\Home.aspx" />
     <Content Include="Sites\Login.aspx" />
@@ -271,6 +272,13 @@
     </Compile>
     <Compile Include="Sites\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sites\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

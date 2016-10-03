@@ -1,8 +1,11 @@
 ﻿<%@ Page Title="Products Display" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="WebshopSite.Sites.Cart" %>
+<asp:Content ID="cartnavcontent" ContentPlaceHolderID="AsideContent" runat="server">
+    <div id="cartnav" runat="server"></div>
+</asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <link href="../Style/Stylesheet.css" rel="stylesheet" />
 
-    <div class="col-md-10 col-md-offset-2">
+    <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="woocommerce">
                                 <table class="shop_table cart">
@@ -16,12 +19,11 @@
                                             <th class="product-subtotal">Total</th>
                                         </tr>
                                     </thead>
-                                   <div class="col-md-10 col-md-offset-2" id="CartContainer" runat="server">
-                                       </div>>
+                                   <tbody id="CartContainer" runat="server"></tbody>
                                          <tr>
                                             <td class="actions" colspan="6">
                                                 <input type="submit" value="Update Cart" name="update_cart" class="button" style="float:left;">
-                                                <input type="submit" value="Proceed to Checkout" name="proceed" class="checkout-button button alt wc-forward" id="checkoutbutton" runat="server" onclick="UpdateCart_Click" style="float:right;">
+                                                <input type="submit" value="Proceed to Checkout" name="proceed" class="checkout-button button alt wc-forward" style="float:right;"/>
                                             </td>
                                         </tr>
                                 </table>

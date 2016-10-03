@@ -1,10 +1,7 @@
 ﻿<%@ Page Title="Login" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebshopSite.Sites.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="AsideContent" runat="server">
-    <div id="MyAccountNav" class="col-md-2">
-        <ul>
-            <li>filler</li>
-            
-        </ul>
+    <div id="LoginNav" class="col-md-2" runat="server">
+
     </div>
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
