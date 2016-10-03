@@ -4,34 +4,36 @@
 
 
         <div class="col-md-2" id="AsideContainer" runat="server">
-           filler
+           
 
 </div>
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
         <link href="../Style/Stylesheet.css" rel="stylesheet" />
 
-        <div class="col-md-10" id="ProductContainer" runat="server">
+        <div id="ProductContainer" runat="server">
             
-             
+            <div id="left" class="col-md-3">
+            <asp:Label ID="lbl_productname" runat="server" ></asp:Label>
             <br />
-            <asp:Label ID="lbl_productname" runat="server" Text='<%# Eval("ProductName")%>' ></asp:Label>
-            <br />
-            <img class="auto-style1" src="../Images/Tröja.png" /><br />
+            <img class="auto-style1" src="../Images/Tröja.png" />
+            </div>
+            <div id="right" class="col-md-3">
+            <asp:Label ID="lbl_description" runat="server">Description</asp:Label>
+            <p id="description" runat="server"></p>
+            <asp:Label ID="lbl_size" runat="server"></asp:Label><br />
+            <asp:Label ID="lbl_color" runat="server"></asp:Label>
+                
             <br />
             <asp:Label ID="lbl_unitinstock" runat="server">[lbl_unitinstock]</asp:Label>
             <br />
-            <asp:Label ID="lbl_despcription" runat="server"></asp:Label>
             <br />
+            <div id="choicecontainer" runat="server">
+                <asp:DropDownList ID="ddl_color" runat="server" AutoPostBack="True" OnTextChanged="Choices_SelectedIndexChanged"></asp:DropDownList>
+                <asp:DropDownList ID="ddl_size" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_size_SelectedIndexChanged"></asp:DropDownList>
+            </div>
             <br />
-            <asp:DropDownList ID="ddl_color" runat="server" OnSelectedIndexChanged="ddl_color_SelectedIndexChanged">
-            </asp:DropDownList>
-            <asp:DropDownList ID="ddl_size" runat="server" >
-            </asp:DropDownList>
-            <br />
-            <br />
-            <asp:Button ID="btn_buy" runat="server" Text="Add to cart" OnClick="btn_buy_Click" />
-            
-             
-        </div> 
+            <asp:Button ID="btn_addtocart" runat="server" Text="Add to cart" OnClick="btn_buy_Click" />
+            </div>
+             </div>
 </asp:Content>

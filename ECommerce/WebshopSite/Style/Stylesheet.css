@@ -1057,3 +1057,11 @@ body{
 #LoginNav {
     margin-top: -50px;
 }
+#MainContent_ProductContainer {
+    color: #000;
+}
+#MainContent_lbl_productname, #MainContent_lbl_description {
+    font-weight: bold;
+    font-size: x-large;
+    color: #1abc9c;
+}
