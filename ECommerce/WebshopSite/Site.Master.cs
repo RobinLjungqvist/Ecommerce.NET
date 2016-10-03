@@ -20,7 +20,7 @@ namespace WebshopSite
                 totalcartsum += item.Price;
             }
 
-            shoppingcart.InnerHtml = $"<a href=\"cart.html\">Cart -<span class=\"cart-amunt\">{totalcartsum}</span><i class=\"fa fa-shopping-cart\"></i> <span class=\"product-count\">{cart.Count}kr</span></a>";
+            shoppingcart.InnerHtml = $"<a href=\"cart.html\">Cart -<span class=\"cart-amunt\">{cart.Count}</span><i class=\"fa fa-shopping-cart\"></i> <span class=\"product-count\">{totalcartsum}kr</span></a>";
         }
     }
 }
