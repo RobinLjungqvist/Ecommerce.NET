@@ -1,11 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SingleProductDisplay.aspx.cs" Inherits="WebshopSite.Sites.SingleProductDisplay" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="AsideContent" runat="server">
 
+
+
+        <div class="col-md-2" id="AsideContainer" runat="server">
+           filler
+
+</div>
+</asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
         <link href="../Style/Stylesheet.css" rel="stylesheet" />
 
-
- <div class="row">
-        <div class="col-md-8" id="ProductContainer" runat="server">
+        <div class="col-md-10" id="ProductContainer" runat="server">
             
              
             <br />
@@ -28,5 +34,4 @@
             
              
         </div> 
-</div>
 </asp:Content>

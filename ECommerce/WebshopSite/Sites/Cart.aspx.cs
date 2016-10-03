@@ -29,35 +29,12 @@ namespace WebshopSite.Sites
                 }
             }
 
+            var bllcategory = new BLLCategory();
+            var categories = bllcategory.ReturnAllCategories();
+            var sidebarhtml = HtmlGenerator.GetCategorySidebarHtml(categories);
+            cartnav.InnerHtml = sidebarhtml;
+            html = HtmlGenerator.GetOrderProducts(orderProds);
 
-            foreach (var item in orderProds)
-            {
-                html += $"<tbody>" +
-                                        $"<tr class=\"cart_item\">" +
-                                           $" <td class=\"product-remove\">" +
-                                                $"<a title=\"Remove this item\" class=\"remove\" href=\"#\">×</a>" +
-                                            $"</td>" +
-                                            $"<td class=\"product-thumbnail\">" +
-                                               $"<a href=\"single-product.html\"><img width=\"145\" height=\"145\" alt=\"poster_1_up\" class=\"shop_thumbnail\" src=\"../Images/testimage.png\" ></a>" +
-                                            $"</td>" +
-                                            $"<td class=\"product-name\">" +
-                                                $"<a href=\"single-product.html\">{item.ProductName}</a>" +
-                                            $"</td>" +
-                                            $"<td class=\"product-price\">" +
-                                                $"<span class=\"amount\">{item.Price}</span>" +
-                                            $"</td>" +
-                                            $"<td class=\"product-quantity\">" +
-                                                $"<div class=\"quantity buttons_added\">" +
-                                                    $"<input type=\"button\" class=\"minus\" value=\"-\">" +
-                                                    $"<input type=\"number\" size=\"4\" class=\"input-text qty text\" title=\"Qty\" value=\"{item.Quantity}\" min=\"0\" step=\"1\">" +
-                                                    $"<input type=\"button\" class=\"plus\" value=\"+\">" +
-                                                $"</div>" +
-                                            $"</td>" +
-                                            $"<td class=\"product-subtotal\">" +
-                                                $"<span class=\"amount\">{item.Price * item.Quantity}</span>" +
-                                            $"</td>" +
-                                    $"</tbody>";
-            }
             CartContainer.InnerHtml = html;
         }
     }

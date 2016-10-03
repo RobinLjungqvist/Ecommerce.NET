@@ -22,7 +22,9 @@ namespace WebshopSite.Sites
             int addToCartID = 0;
             string category = "";
             NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
-            if(string.IsNullOrEmpty(Request.QueryString["Category"]))
+
+            #region URLChecksAndHandling
+            if (string.IsNullOrEmpty(Request.QueryString["Category"]))
             {
                 productList = bll.GetNewestProducts();
                 category = "nyheter";
@@ -44,62 +46,34 @@ namespace WebshopSite.Sites
             {
                 addToCartID = Convert.ToInt32(qscoll.Get("AddToCart"));
             }
-            string html = "";
-
-            foreach (var item in productList)
-            {
-                html += $"<div class=\"col-md-3 col-sm-6 productdisplay\">" +
-                                            $"<div class=\"single-shop-product\">" +
-                                            $"<div class=\"product-upper\">" +
-                                            $"<img src = \"../Images/testimage.png\" alt=\"image\">" +
-                                            $"</div>" +
-                                            $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name}</a></h2>" +
-                                            $"<div class=\"product-carousel-price\">" +
-                                            $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
-                                            $"</div>" +
-
-                                            $"<div class=\"product-option-shop\">" +
-                                            $"<a class=\"add_to_cart_button\" data-quantity=\"1\" data-product_sku=\"\" data-product_id=\"70\" rel=\"nofollow\" href=\"ProductsDisplay.aspx?Category={category}&AddToCart={item.productID}\">Add to cart</a>" +
-                                            $"</div>" +
-                                            $"</div>" +
-                                            $"</div>" +
-                                            $"";
-
-            }
             if (!string.IsNullOrEmpty(Request.QueryString["AddToCart"]))
             {
                 var cart = (List<OrderProduct>)Session["Cart"];
                 var anotherprod = new OrderProduct();
                 anotherprod.ProductID = addToCartID;
                 var anotherprodagian = new Product();
-                anotherprodagian.productID = anotherprod.ProductID; 
+                anotherprodagian.productID = anotherprod.ProductID;
                 var anotherprodlist = bll.SearchProduct(anotherprodagian);
                 foreach (var item in anotherprodlist)
                 {
-                    
-                    anotherprod.Price  = Convert.ToInt32(item.ppu);
+
+                    anotherprod.Price = Convert.ToInt32(item.ppu);
                     anotherprod.ProductName = item.name;
                     anotherprod.Quantity++;
                     cart.Add(anotherprod);
                 }
             }
+            #endregion
+
+            #region DynamicHtmlGeneration
+
+            var html = HtmlGenerator.GetProductsHtml(productList, category);
+            ProductContainer.InnerHtml = html;
 
             var bllCategory = new BLLCategory();
-
             var prodlist = bllCategory.ReturnAllCategories();
-            string html2   = $"<div class=\"col-md-2 offset-1\" id=\"CategoryContainer\" runat=\"server\">" +
-                             $"<div class=\"aside - nav\">" +
-                             $"<h2 id=\"categoryheader\">Categories</h2>" +
-                             $"<ul>";
-            foreach (var item in prodlist)
-            {
-                html2 += $"<li><a href=\"/Sites/ProductsDisplay.aspx?Category={item}\">{item.ToUpper()}</a></li>";
-            }
-            html2 += "</ul>" +
-                                   "</div>" +
-                                   "</div>";
-            ProductContainer.InnerHtml = html;
-            AsideContainer.InnerHtml = html2;
+            AsideContainer.InnerHtml = HtmlGenerator.GetCategorySidebarHtml(prodlist);
+#endregion
         }
     }
 }

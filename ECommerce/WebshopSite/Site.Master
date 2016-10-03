@@ -105,9 +105,9 @@
         </div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+            </div>
             <hr/>
-             </div>
-                    <footer>
+            <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Leonardo, Katrina, Kevin & Robin</p>
             </footer>
     </form>
