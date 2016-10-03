@@ -3,7 +3,7 @@
 
 
 
-        <div class="col-md-2" id="AsideContainer" runat="server">
+        <div class="col-md-3" id="AsideContainer" runat="server">
            
 
 </div>
@@ -13,12 +13,12 @@
 
         <div id="ProductContainer" runat="server">
             
-            <div id="left" class="col-md-3">
+            <div id="left" class="col-md-3 col-sm-12">
             <asp:Label ID="lbl_productname" runat="server" ></asp:Label>
             <br />
             <img class="auto-style1" src="../Images/Tröja.png" />
             </div>
-            <div id="right" class="col-md-3">
+            <div id="right" class="col-md-3 col-sm-12">
             <asp:Label ID="lbl_description" runat="server">Description</asp:Label>
             <p id="description" runat="server"></p>
             <asp:Label ID="lbl_size" runat="server"></asp:Label><br />

@@ -49,8 +49,8 @@ namespace WebshopSite
         {
             string html = $"<div class=\"col-md-2 offset-1\" id=\"CategoryContainer\" runat=\"server\">" +
                              $"<div class=\"aside - nav\">" +
-                             $"<h2 id=\"categoryheader\">Categories</h2>" +
-                             $"<ul>";
+                             $"<ul>" +
+                             $"<h2 id=\"categoryheader\">Categories</h2>";
             foreach (var item in prodlist)
             {
                 html += $"<li><a href=\"/Sites/ProductsDisplay.aspx?Category={item}\">{item.ToUpper()}</a></li>";

@@ -12,7 +12,10 @@ namespace WebshopSite.Sites
 {
     public partial class SingleProductDisplay : System.Web.UI.Page
     {
+        protected void Page_Init(object sender, EventArgs e)
+        {
 
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             var bllcategory = new BLLCategory();
@@ -30,6 +33,10 @@ namespace WebshopSite.Sites
                 Response.Redirect("ProductsDisplay.aspx");
             }
             var productList = bll.SearchProduct(productToDisplay);
+
+
+
+
  
             productToDisplay = productList.FirstOrDefault();
             Session["SingleProduct"] = productToDisplay;
@@ -41,20 +48,27 @@ namespace WebshopSite.Sites
 
             var searchObject = new Product();
             searchObject.name = productToDisplay.name;
+            searchObject.Color = productToDisplay.Color;
 
             var similarProducts = bll.SearchProduct(searchObject);
 
             if(!ddl_color.Items.Contains(new ListItem("--Color--")))
                 ddl_color.Items.Add("--Color--");
             if (!ddl_size.Items.Contains(new ListItem("--Size--")))
-                ddl_size.Items.Add("--Size--"); 
+                ddl_size.Items.Add("--Size--");
 
+            foreach (var product in similarProducts)
+            {
+                if (!ddl_size.Items.Contains(new ListItem(product.size)))
+                    ddl_size.Items.Add(product.size);
+            }
+
+            searchObject.Color = null;
+            similarProducts = bll.SearchProduct(searchObject);
             foreach (var product in similarProducts)
             {
                 if (!ddl_color.Items.Contains(new ListItem(product.Color)))
                     ddl_color.Items.Add(product.Color);
-                if (!ddl_size.Items.Contains(new ListItem(product.size)))
-                    ddl_size.Items.Add(product.size);
             }
 
 
@@ -71,13 +85,15 @@ namespace WebshopSite.Sites
             orderProduct.Quantity = 1;
             var cart = (List<OrderProduct>)Session["Cart"];
             cart.Add(orderProduct);
+            Response.Redirect(Request.Url.ToString());
             
         }
 
 
         protected void Choices_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ddl_color.SelectedValue != "--Color--") {
+            if (ddl_color.SelectedValue != "--Color--")
+            {
                 var bll = new BLLProduct();
                 var searchObject = new Product();
                 searchObject.name = lbl_productname.Text;
