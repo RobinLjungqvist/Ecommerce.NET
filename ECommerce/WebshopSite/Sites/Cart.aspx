@@ -21,7 +21,7 @@
                                          <tr>
                                             <td class="actions" colspan="6">
                                                 <input type="submit" value="Update Cart" name="update_cart" class="button" style="float:left;">
-                                                <input type="submit" value="Proceed to Checkout" name="proceed" class="checkout-button button alt wc-forward" style="float:right;">
+                                                <input type="submit" value="Proceed to Checkout" name="proceed" class="checkout-button button alt wc-forward" id="checkoutbutton" runat="server" onclick="UpdateCart_Click" style="float:right;">
                                             </td>
                                         </tr>
                                 </table>
