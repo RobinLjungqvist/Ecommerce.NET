@@ -28,6 +28,21 @@ namespace WebshopSite
 
                 shoppingcart.InnerHtml = $"<a href=\"Cart.aspx\">Cart <span class=\"cart-amunt\">{totalcartsum}kr</span><i class=\"fa fa-shopping-cart\"></i> <span class=\"product-count\">{cart.Count}</span></a>";
             
+            if(Session["User"] == null)
+            {
+                topnavlogin.Visible = true;
+            }
+            else
+            {
+                topnavlogout.Visible = true;
+            }
+
+        }
+
+        protected void topnavlogout_Click(object sender, EventArgs e)
+        {
+            Session["User"] = null;
+            Response.Redirect("Home.aspx");
         }
     }
 }
