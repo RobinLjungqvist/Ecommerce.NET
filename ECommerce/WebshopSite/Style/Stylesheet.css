@@ -1072,8 +1072,10 @@ html, body{
 .text_box{
     display: inline-block;
     position:absolute;
-    height: 25px;
+    height: 10px;
+    width: 200px;
     left: 120px;
+    margin-top: 0px;
 }
 .formbtn{
     position:relative;
@@ -1082,6 +1084,7 @@ html, body{
 }
 .formcol{
     margin: auto auto;
+    margin-bottom: 3px;
 }
 .footerinfo{
     margin: auto;
@@ -1101,31 +1104,19 @@ html, body{
 #Contactform{
     font-size:x-large;
     font-weight: bold;
- 
 }
-
-#tblcontact{
-    height: 400px; 
+.validation{
+    display: inline-block;
+    position:absolute;
+    height: 10px;
+    left: 340px;
+    margin-top: 0px;
 }
-
-#tousmsg{
-    border-left: solid 3px #666;
-    padding-left: 50px;
-    overflow:auto;
-    height: 500px;
-
+.updatemsg{
+    display: inline-block;
+    position:absolute;
+    left: 330px;
+    margin-top: 18px;
 }
-
-#tousmsg h3{
-    text-align:center;
-    
-}
-
-#MainContent_Label1, #MainContent_Label2, #MainContent_Label3, #MainContent_Label4{
-    font-weight:bold;
-     
-}  
-
-
 
  

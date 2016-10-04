@@ -36,7 +36,7 @@ namespace WebshopSite
                 {
                     var htmlProduct =
                         $"<tr id=\"prodheadid{order.OrderID}\" class=\"prodhead hiddentable\" style=\"display:none\"><td>Product ID</td><td>Product name</td><td>Quantity</td><td>Unit Price</td></tr>" +
-                        $"<tr id=\"prodid{order.OrderID}\" class=\"productrow hiddentable\" style=\"display:none\">" +
+                        $"<tr id=\"prodid{order.OrderID}\" class=\"productrow hiddentable show{order.OrderID}\" style=\"display:none\">" +
                        $"<td>{product.ProductID}</td><td><a href=\"SingleProductDisplay.aspx?ProductID={product.ProductID}\">{product.ProductName}</a></td><td> {product.Quantity}</td><td> {Convert.ToDecimal(product.Price)} kr </td>" +
                         "</tr>";
                     sb.Append(htmlProduct);
@@ -48,30 +48,30 @@ namespace WebshopSite
 
         public static string OrderSummaryHtml(Order order)
         {
-            var html = @"<table>
-            <tr>
-                <th>
-                    Product name
-                </th>
-                <th>
-                    Quantity
-                </th>
-                <th>
-                    Price per Unit
-                </th>
-            </tr>";
+            var html = "<div class=\"woocommerce\"><table class=\"shop_table cart\">" +
+            "<tr>" +
+                "<th class=\"product - name\">" +
+                    "Product name"+
+                "</th>"+
+                "<th class=\"product-quantity\" >" +
+                    "Quantity"+
+                "</th>" +
+                "<th class=\"product-price\">" +
+                    "Price per Unit" +
+                "</th>" +
+            "</tr>";
 
             var products = order.Products;
             foreach (var product in products)
             {
-                html += $"<tr class=\"productsumrow\">"+
-                   $"<td>{product.ProductName}</td> "+
-                   $"<td>{product.Quantity}</td> " +
-                   $"<td>{product.Price}</td> " +
+                html += $"<tr class=\"cart_item\">" +
+                   $"<td class=\"product-name\">{product.ProductName}</td> "+
+                   $"<td class=\"product-quantity\">{product.Quantity}</td> " +
+                   $"<td class=\"product-price\">{product.Price}</td> " +
                     "</tr>";
             }
 
-            html += "</table>";
+            html += "</table></div>";
             return html;
         }
 

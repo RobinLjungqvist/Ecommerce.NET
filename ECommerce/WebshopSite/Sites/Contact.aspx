@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Products Display" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebshopSite.Sites.Contact" %>
+﻿<%@ Page Title="Contact" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebshopSite.Sites.Contact" %>
 
 <asp:Content ID="contactinformation" ContentPlaceHolderID="AsideContent" runat="server">
     <div id="CategoryContainer" class="col-md-2" runat="server">;

@@ -89,7 +89,7 @@
                         <li><a href="Home.aspx">Home</a></li>
                         <li><a href="ProductsDisplay.aspx?Category=Nyheter">Products</a></li>
                         <li><a href="Cart.aspx">Cart</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="Checkout.aspx">Checkout</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>  

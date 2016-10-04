@@ -10,7 +10,7 @@
 namespace WebshopSite.Sites {
     
     
-    public partial class Checkout {
+    public partial class receipt {
         
         /// <summary>
         /// CategoryContainer control.
@@ -31,93 +31,57 @@ namespace WebshopSite.Sites {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl CheckoutContent;
         
         /// <summary>
-        /// info control.
+        /// orderinfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl info;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl orderinfo;
         
         /// <summary>
-        /// lbl_ccn control.
+        /// name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_ccn;
+        protected global::System.Web.UI.WebControls.Label name;
         
         /// <summary>
-        /// txtbox_ccn control.
+        /// adress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbox_ccn;
+        protected global::System.Web.UI.WebControls.Label adress;
         
         /// <summary>
-        /// reqfieldval control.
+        /// zipandcity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqfieldval;
+        protected global::System.Web.UI.WebControls.Label zipandcity;
         
         /// <summary>
-        /// regexpval_zip control.
+        /// orderproducts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator regexpval_zip;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl orderproducts;
         
         /// <summary>
-        /// lbl_sc control.
+        /// OrderDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_sc;
-        
-        /// <summary>
-        /// txtbox_ccv control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbox_ccv;
-        
-        /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
-        /// regex_ccv control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator regex_ccv;
-        
-        /// <summary>
-        /// btn_checkout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_checkout;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl OrderDetails;
     }
 }

@@ -18,50 +18,53 @@ namespace WebshopSite.Sites
             var categories = bllcategory.ReturnAllCategories();
             CategoryContainer.InnerHtml = HtmlGenerator.GetCategorySidebarHtml(categories);
             #endregion
-
-
-
-            var cart = (List<OrderProduct>)Session["Cart"];
-            if (cart.Count < 1)
+            if(Session["User"] != null)
             {
-                orderinfo.InnerHtml = "<h3>No products in the cart.</h3><br />";
+                var cart = (List<OrderProduct>)Session["Cart"];
+                if(cart.Count <= 0)
+                {
+                    info.InnerHtml = "<h4> No products in cart. </h4>";
+                }
+                else
+                {
+
+                }
             }
             else
-            {
-                OrderDetails.Visible = true;
-                var order = CreateOrder();
-                orderproducts.InnerHtml = HtmlGenerator.OrderSummaryHtml(order);
-            }
-
-
-            if (Session["User"] == null)
             {
                 var login = "<a ID =\"login\" runat =\"server\" href=\"Login.aspx\">login</a>";
-                var register= "<a ID =\"register\" runat =\"server\" href=\"Registration.aspx\">register</a>";
-                orderinfo.InnerHtml += $"<h4>Please {login} or {register} in to check out your order.</h4><br />";
-            }
-            else
-            {
-                var user = (User)Session["User"];
-                name.Text = $"Name: {user.FirstName} {user.LastName}";
-                adress.Text = $"Adress: {user.StreetAdress}";
-                zipandcity.Text = $"{user.City} {user.ZipCode}";
+                var register = "<a ID =\"register\" runat =\"server\" href=\"Registration.aspx\">register</a>";
+                info.InnerHtml += $"<h4>Please {login} or {register} in to place an order.</h4><br />";
             }
         }
 
-        private Order CreateOrder()
+        private Order CreateOrder(List<OrderProduct> cart, User user)
         {
             var order = new Order();
-            var user = (User)Session["User"];
             order.CustomerID = user.UserID;
             order.Orderdate = DateTime.Now;
             order.DeliveryAdress = user.StreetAdress;
             order.Zipcode = (int)user.ZipCode;
             order.City = user.City;
-            order.Products = (List<OrderProduct>)Session["Cart"];
+            order.Products = cart;
+            order.CalculateTotalPrice();
 
             return order;
 
+        }
+
+        protected void btn_checkout_Click(object sender, EventArgs e)
+        {
+            var cart = (List<OrderProduct>)Session["Cart"];
+            var user = (User)Session["User"];
+            if (cart.Count > 0 && (User)Session["User"] != null)
+            {
+                var order = CreateOrder(cart,user);
+                var bllOrder = new BLLOrder();
+                bllOrder.AddOrder(order);
+                Session["Order"] = order;
+                Response.Redirect("receipt.aspx");
+            }
         }
     }
 }

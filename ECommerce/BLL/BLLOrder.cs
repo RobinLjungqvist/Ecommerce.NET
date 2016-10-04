@@ -110,7 +110,7 @@ namespace BLL
 
 
             if(order.Products != null) { 
-            order.Products.ForEach(x => AddOrderProduct(order));
+            AddOrderProducts(order);
             }
             return insertedID;
         }
@@ -159,14 +159,14 @@ namespace BLL
 
         }
 
-        private void AddOrderProduct(Order order)
+        private void AddOrderProducts(Order order)
         {
 
             if (order.Products.Count > 0)
             {
                 foreach(var product in order.Products)
                 {
-                    var sql = "INSERT INTO tbalOrderDetails (OrderID, ProductID, Quantity, Price) " + 
+                    var sql = "INSERT INTO tblOrderDetails (OrderID, ProductID, Quantity, Price) " + 
                              $"VALUES ('{order.OrderID}', '{product.ProductID}', '{product.Quantity}', '{product.Price}')";
                     var dal = new DALGeneral();
                     dal.CrudData(sql);

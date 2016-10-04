@@ -14,6 +14,9 @@ namespace WebshopSite.Sites
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["User"] != null)
+            {
+
             var bll = new BLLOrder();
             var order = new Order();
             var user = (User)Session["User"];
@@ -21,7 +24,13 @@ namespace WebshopSite.Sites
             var orders = bll.SearchOrder(order);
             var html = HtmlGenerator.GetOrderHtml(orders);
             orderhistorycontent.InnerHtml = html;
-            
+
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
+
 
         }
         protected void btn_logout_Click(object sender, EventArgs e)
