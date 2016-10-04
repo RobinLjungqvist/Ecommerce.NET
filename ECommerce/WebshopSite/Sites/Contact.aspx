@@ -53,7 +53,7 @@
             <asp:Label ID="Label4" runat="server" Text="Message *"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtBody" runat="server" TextMode = "MultiLine" ></asp:TextBox><br />
+            <asp:TextBox ID="txtBody" runat="server" TextMode = "MultiLine" Height="113px" Width="300px" ></asp:TextBox><br />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Required field for Message"
             ControlToValidate = "txtBody"></asp:RequiredFieldValidator>
         </td>

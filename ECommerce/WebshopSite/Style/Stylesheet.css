@@ -1112,7 +1112,7 @@ html, body{
     border-left: solid 3px #666;
     padding-left: 50px;
     overflow:auto;
-    height: 400px;
+    height: 500px;
 
 }
 
@@ -1124,8 +1124,7 @@ html, body{
 #MainContent_Label1, #MainContent_Label2, #MainContent_Label3, #MainContent_Label4{
     font-weight:bold;
      
-} 
- 
+}  
 
 
 
