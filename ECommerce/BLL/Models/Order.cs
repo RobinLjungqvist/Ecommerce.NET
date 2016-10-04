@@ -14,10 +14,10 @@ namespace BLL.Models
         public string City { get; set; }
         public int Zipcode { get; set; }
         public int? CustomerID { get; set; }
-        public decimal TotalPrice { get; private set; }
+        public decimal TotalPrice { get; set; }
         public List<OrderProduct> Products { get; set; }
 
-        public void ReturnTotalPrice()
+        public void CalculateTotalPrice()
         {
             decimal total = 0;
             foreach (var product in Products)
