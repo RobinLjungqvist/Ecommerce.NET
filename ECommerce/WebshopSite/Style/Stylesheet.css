@@ -1101,6 +1101,32 @@ html, body{
 #Contactform{
     font-size:x-large;
     font-weight: bold;
+ 
 }
+
+#tblcontact{
+    height: 400px; 
+}
+
+#tousmsg{
+    border-left: solid 3px #666;
+    padding-left: 50px;
+    overflow:auto;
+    height: 400px;
+
+}
+
+#tousmsg h3{
+    text-align:center;
+    
+}
+
+#MainContent_Label1, #MainContent_Label2, #MainContent_Label3, #MainContent_Label4{
+    font-weight:bold;
+     
+} 
+ 
+
+
 
  
