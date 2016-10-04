@@ -190,6 +190,8 @@ namespace BLL
                 dal.CrudData(sql);
             }
         }
+
+       
     }
 
 }

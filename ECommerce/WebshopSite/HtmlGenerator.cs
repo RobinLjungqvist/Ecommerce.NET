@@ -45,6 +45,36 @@ namespace WebshopSite
             sb.Append("</table></div>");
             return sb.ToString();
         }
+
+        public static string OrderSummaryHtml(Order order)
+        {
+            var html = @"<table>
+            <tr>
+                <th>
+                    Product name
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Price per Unit
+                </th>
+            </tr>";
+
+            var products = order.Products;
+            foreach (var product in products)
+            {
+                html += $"<tr class=\"productsumrow\">"+
+                   $"<td>{product.ProductName}</td> "+
+                   $"<td>{product.Quantity}</td> " +
+                   $"<td>{product.Price}</td> " +
+                    "</tr>";
+            }
+
+            html += "</table>";
+            return html;
+        }
+
         public static string GetCategorySidebarHtml(List<string> prodlist)
         {
             string html = $"<div class=\"col-md-2 offset-1\" id=\"CategoryContainer\" runat=\"server\">" +

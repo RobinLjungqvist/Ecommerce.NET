@@ -18,7 +18,7 @@
 <meta name="description" content="E-commerce School Project" />
 </head>
 <body role="presentation">
-    <form runat="server">
+    <form id="form" name="theform" runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
