@@ -1030,10 +1030,10 @@ html, body{
 .body-content{
     padding-top:40px;
 }
-#MainContent{
+/*#MainContent{
         padding-top: 25px;
     background-color: hotpink;
-}
+}*/
 .AsideContent{
     padding : 100px;
 }
@@ -1081,7 +1081,14 @@ html, body{
     left: 145px;
 }
 .formcol{
-    margin-bottom: 5px;
+    margin: auto auto;
+}
+.footerinfo{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+
 }
 /*#CategoryContainer, #CategoryContainer ul li a{
     color: #f4f4f4;
@@ -1090,3 +1097,7 @@ html, body{
 #CategoryContainer ul{
     list-style-type: none;
 }*/
+
+#Contactform{
+    font-size:x-large;
+}

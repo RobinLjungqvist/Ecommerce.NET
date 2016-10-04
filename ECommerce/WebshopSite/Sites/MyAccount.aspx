@@ -60,7 +60,7 @@
         <asp:Label ID="lbl_infoUpdateResult" runat="server"></asp:Label>
             </div>
         <br />
-                <div>
+               
         <div class="formcol">
 
                    <h2> Change Password</h2>
@@ -73,9 +73,10 @@
                         <asp:CompareValidator ID="compareval_password" runat="server" ControlToCompare="txtbox_password" ControlToValidate="txtbox_pwreenter" ErrorMessage="* Passwords doesn't match." ForeColor="Red" Display="Dynamic"></asp:CompareValidator>
         </div>
         <div class="formcol">
-                    <asp:Button ID="btn_savepwchanges" runat="server" Text="Save Changes" validationgroup="password" OnClick="btn_savepwchanges_Click" />
+                    <asp:Button ID="btn_savepwchanges" runat="server" Text="Save Changes" validationgroup="password" CssClass="formbtn" OnClick="btn_savepwchanges_Click" />
                     <asp:Label id="lbl_pwupdateresult" runat="server"></asp:Label>
         </div>
 
     </div>
+        <br />
 </asp:Content>

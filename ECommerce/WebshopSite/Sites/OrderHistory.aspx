@@ -3,7 +3,7 @@
 <asp:Content ID="orderhistoryaside" ContentPlaceHolderID="AsideContent" runat="server">
     <div id="CategoryContainer" class="col-md-2">
         <ul>
-            <h2 id=categoryheader>Navigation</h2>
+            <h2 id="categoryheader">Navigation</h2>
             <li><a href="MyAccount.aspx">Details</a></li>
             <li><a href="OrderHistory.aspx">Order History</a></li>
             <li><asp:LinkButton ID="btn_logout" runat="server" OnClick="btn_logout_Click">Logout</asp:LinkButton></li>

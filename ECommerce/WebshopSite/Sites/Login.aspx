@@ -9,7 +9,7 @@
         <h2 class="header">Login</h2>
         <div class="formcol">
         <asp:Label ID="lbl_loginerror" runat="server" ForeColor="Red" Text="Incorrect username or password." Visible="False"></asp:Label>
-        </div>
+         </div>
         <div class="formcol">
         <asp:Label ID="lbl_username" runat="server" Text="Username:" CssClass="reg_lbl"></asp:Label>
         <asp:TextBox ID="txtbox_username" runat="server" CssClass="text_box"></asp:TextBox>
