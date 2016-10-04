@@ -10,15 +10,15 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <link href="../Style/Stylesheet.css" rel="stylesheet" />
 
-<div class="wrappercontact col-md-10">
-        <table border = "0" style="width: 409px">
-            <tr id="Contactform"><td>ContactForm</td></tr>
+<div class="wrappercontact col-md-4">
+        <table  > 
+            <tr id="Contactform"><td>Contact Form <br /><br /></td></tr>
     <tr>
         <td>
             <asp:Label ID="Label1" runat="server" Text="Name*"></asp:Label><br />
         </td>
         <td>
-            <asp:TextBox ID="txtName" runat="server" ValidationGroup = "contact"></asp:TextBox><br />
+            <asp:TextBox ID="txtName" runat="server" ValidationGroup = "contact" OnTextChanged="btnSend_Click"></asp:TextBox><br />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"
              ControlToValidate = "txtName"></asp:RequiredFieldValidator>
         </td>
@@ -61,7 +61,7 @@
     </tr>
     <tr>
         <td>
-            <asp:Button ID="btnSend" runat="server" Text="Send" />
+            <asp:Button ID="btnSend" runat="server" Text="Send" OnClick="btnSend_Click" />
        </td>
     </tr>
     <tr>
@@ -69,6 +69,11 @@
             <asp:Label ID="lblMessage" runat="server" Text="Message sent" ForeColor = "Green"></asp:Label>
        </td>
     </tr>
-</table>
+</table> 
 </div>
+
+     <div class="wrappercontact col-md-4">
+         <asp:Label ID="showmsg" runat="server"  ></asp:Label>
+    </div>
+
 </asp:Content>
