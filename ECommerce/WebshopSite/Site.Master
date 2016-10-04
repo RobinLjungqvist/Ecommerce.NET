@@ -97,19 +97,26 @@
         </div>
     </div>
         <div class="row">
-        <div class="container-fluid body-content" >
+        <div class="container-fluid body-content">
                  <div class="aside">
                    <asp:ContentPlaceHolder ID="AsideContent" runat="server">
                    </asp:ContentPlaceHolder>
                  </div>
-        </div>
+       
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             </div>
-            <hr/>
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Leonardo, Katrina, Kevin & Robin</p>
+            </div>
+        <div class="row">
+            <footer class="col-md-12"">
+                <hr/>
+
+                <div class="footerinfo">
+                    &copy; <%: DateTime.Now.Year %> - Leonardo, Katrina, Kevin & Robin
+
+                </div>
             </footer>
+        </div>
     </form>
 </body>
 </html>

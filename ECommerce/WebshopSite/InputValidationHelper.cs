@@ -11,14 +11,19 @@ namespace WebshopSite
     {
         public static string UserIsValid(User user)
         {
-            var Result = string.Empty;
+            var Result = "* ";
             if (!UserNameIsValid(user.UserName))
             {
-                Result += "* The Username is taken.\n ";
+                Result += "The Username is taken.\n ";
             }
             if (!EmailIsValid(user.Email))
             {
-                Result += " * The E-mail is already bound to an account.";
+                if(Result.Length > 0)
+                {
+                    Result += "and";
+                }
+                { }
+                Result += "The E-mail is already bound to an account.";
             }
             if (Result == string.Empty)
             {
@@ -69,7 +74,7 @@ namespace WebshopSite
             tempUser.Email = email.ToLower();
             foreach (var user in bll.SearchUser(tempUser))
             {
-                if (user.Email.ToLower() == email)
+                if (user.Email.ToLower() == email.ToLower())
                 {
                     IsValid = false;
                 }

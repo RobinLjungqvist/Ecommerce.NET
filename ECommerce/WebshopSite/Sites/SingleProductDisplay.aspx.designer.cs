@@ -40,6 +40,42 @@ namespace WebshopSite.Sites {
         protected global::System.Web.UI.WebControls.Label lbl_productname;
         
         /// <summary>
+        /// lbl_description control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_description;
+        
+        /// <summary>
+        /// description control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl description;
+        
+        /// <summary>
+        /// lbl_size control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_size;
+        
+        /// <summary>
+        /// lbl_color control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_color;
+        
+        /// <summary>
         /// lbl_unitinstock control.
         /// </summary>
         /// <remarks>
@@ -49,13 +85,13 @@ namespace WebshopSite.Sites {
         protected global::System.Web.UI.WebControls.Label lbl_unitinstock;
         
         /// <summary>
-        /// lbl_despcription control.
+        /// choicecontainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_despcription;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl choicecontainer;
         
         /// <summary>
         /// ddl_color control.
@@ -76,12 +112,12 @@ namespace WebshopSite.Sites {
         protected global::System.Web.UI.WebControls.DropDownList ddl_size;
         
         /// <summary>
-        /// btn_buy control.
+        /// btn_addtocart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_buy;
+        protected global::System.Web.UI.WebControls.Button btn_addtocart;
     }
 }

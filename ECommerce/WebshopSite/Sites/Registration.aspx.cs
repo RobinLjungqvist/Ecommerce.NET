@@ -13,7 +13,9 @@ namespace WebshopSite.Sites
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            var bllcategory = new BLLCategory();
+            var categories = bllcategory.ReturnAllCategories();
+            MyAccountNav.InnerHtml = HtmlGenerator.GetCategorySidebarHtml(categories);
         }
 
         protected void btn_register_Click(object sender, EventArgs e)

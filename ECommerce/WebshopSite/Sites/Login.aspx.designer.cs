@@ -31,6 +31,15 @@ namespace WebshopSite.Sites {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoginContent;
         
         /// <summary>
+        /// lbl_loginerror control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_loginerror;
+        
+        /// <summary>
         /// lbl_username control.
         /// </summary>
         /// <remarks>
@@ -85,24 +94,6 @@ namespace WebshopSite.Sites {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqfieldval_password;
         
         /// <summary>
-        /// btn_login control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_login;
-        
-        /// <summary>
-        /// lbl_loginerror control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_loginerror;
-        
-        /// <summary>
         /// btn_register control.
         /// </summary>
         /// <remarks>
@@ -110,5 +101,14 @@ namespace WebshopSite.Sites {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btn_register;
+        
+        /// <summary>
+        /// btn_login control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_login;
     }
 }
