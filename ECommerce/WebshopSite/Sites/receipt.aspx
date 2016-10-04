@@ -6,15 +6,22 @@
     </div>
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-<link href="../Style/Stylesheet.css" rel="stylesheet" />
-
-    <div id="CheckoutContent" class="col-md-10" runat="server">
+    <link href="../Style/Stylesheet.css" rel="stylesheet" />
+    <div>
+                
+            </div>
+    <div id="CheckoutContent" class="col-md-6" runat="server">
         <h2><%: Title %></h2>
         <div id="orderinfo" runat="server">
             <h4>Customer details</h4>
-             <asp:Label id="name" runat="server"></asp:Label><br />
-                <asp:Label id="adress" runat="server"></asp:Label><br />
-                 <asp:Label id="zipandcity" runat="server"></asp:Label><br />
+             <asp:Label class="reg_lbl" runat="server" AssociatedControlID="txtbox_name">Name:</asp:Label><asp:textbox ID="txtbox_name" CssClass="text_box" runat="server" Enabled="False"></asp:textbox><br />
+                <asp:Label class="reg_lbl" runat="server" AssociatedControlID="txtbox_email">Email:</asp:Label><asp:textbox ID="txtbox_email" CssClass="text_box" runat="server"></asp:textbox><br />
+                 <asp:Label class="reg_lbl" runat="server" AssociatedControlID="txtbox_adress">Adress:</asp:Label><asp:textbox ID="txtbox_adress" CssClass="text_box" runat="server" Enabled="False"></asp:textbox><br />
+                 <asp:Label class="reg_lbl" runat="server" AssociatedControlID="txtbox_city">City:</asp:Label><asp:textbox ID="txtbox_city" CssClass="text_box" runat="server" Enabled="False"></asp:textbox><br />
+                 <asp:Label class="reg_lbl" runat="server" AssociatedControlID="txtbox_zipcode">Zipcode:</asp:Label><asp:textbox ID="txtbox_zipcode" CssClass="text_box" runat="server" Enabled="False"></asp:textbox><br />
+
+
+            <asp:Button runat="server" Text="Keep Shopping" CssClass="btn_keepshopping" ID="btn_keepshopping" OnClick="btn_keepshopping_Click"/>
             <h4>Products</h4>
 
             <div id="orderproducts" runat="server"></div>
@@ -26,6 +33,7 @@
 
                  
              </div>
+
         </div>
 
     </div>

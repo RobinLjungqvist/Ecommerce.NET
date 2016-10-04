@@ -97,7 +97,7 @@ namespace BLL
                         $"SELECT @zid = ZipcodeID FROM tblZipcode AS z WHERE z.Zipcode = {order.Zipcode}; " +
                         $"SELECT @cid = CityID FROM tblCity AS c WHERE c.City = '{order.City}'; " +
                          "INSERT INTO tblOrderHead (Orderdate, DeliveryAdress, CityID, ZipcodeID, CustomerID, TotalPrice) " +
-                        $"VALUES ('{order.Orderdate}', '{order.DeliveryAdress}', @cid, @zid, '{order.CustomerID}', {order.TotalPrice}); SELECT SCOPE_IDENTITY() as InsertedID;";
+                        $"VALUES ('{order.Orderdate}', '{order.DeliveryAdress}', @cid, @zid, '{order.CustomerID}', '{order.TotalPrice}'); SELECT SCOPE_IDENTITY() as InsertedID;";
             var dal = new DALGeneral();
             var dt = dal.GetData(sql);
 

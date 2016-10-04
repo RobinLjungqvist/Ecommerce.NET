@@ -40,31 +40,58 @@ namespace WebshopSite.Sites {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl orderinfo;
         
         /// <summary>
-        /// name control.
+        /// txtbox_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label name;
+        protected global::System.Web.UI.WebControls.TextBox txtbox_name;
         
         /// <summary>
-        /// adress control.
+        /// txtbox_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label adress;
+        protected global::System.Web.UI.WebControls.TextBox txtbox_email;
         
         /// <summary>
-        /// zipandcity control.
+        /// txtbox_adress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label zipandcity;
+        protected global::System.Web.UI.WebControls.TextBox txtbox_adress;
+        
+        /// <summary>
+        /// txtbox_city control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtbox_city;
+        
+        /// <summary>
+        /// txtbox_zipcode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtbox_zipcode;
+        
+        /// <summary>
+        /// btn_keepshopping control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_keepshopping;
         
         /// <summary>
         /// orderproducts control.

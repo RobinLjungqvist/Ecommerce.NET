@@ -27,7 +27,7 @@ namespace WebshopSite.Sites
                 }
                 else
                 {
-
+                    checkout.Visible = true;
                 }
             }
             else

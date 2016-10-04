@@ -20,30 +20,40 @@ namespace WebshopSite.Sites
             #endregion
 
 
-
             var order = (Order)Session["Order"];
             if (order != null)
             {
                 if (Session["User"] != null)
                 {
                     var user = (User)Session["User"];
-                    name.Text = $"Name: {user.FirstName} {user.LastName}";
-                    adress.Text = $"Delivery Adress: {user.StreetAdress}";
-                    zipandcity.Text = $"{user.City} {user.ZipCode}";
+                    txtbox_name.Text =  $"{user.FirstName} {user.LastName}";
+                    txtbox_email.Text = $"{user.StreetAdress}";
+                    txtbox_adress.Text = $"{user.StreetAdress}";
+                    txtbox_city.Text = $"{user.City}";
+                    txtbox_zipcode.Text = $"{user.ZipCode}";
 
                     OrderDetails.InnerHtml = HtmlGenerator.OrderSummaryHtml(order);
+                    OrderDetails.Visible = true;
+                    Session["Cart"] = new List<OrderProduct>();
+                    Session["Order"] = new Order();
                 }
                 else
                 {
                     var login = "<a ID =\"login\" runat =\"server\" href=\"Login.aspx\">login</a>";
                     var register = "<a ID =\"register\" runat =\"server\" href=\"Registration.aspx\">register</a>";
                     orderinfo.InnerHtml += $"<h4>Please {login} or {register} in to place an order.</h4><br />";
+                    
                 }
             }
             else
             {
                 orderinfo.InnerHtml = "<h4>No order to process.</h4><br />";
             }
+        }
+
+        protected void btn_keepshopping_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ProductsDisplay.aspx");
         }
     }
 }

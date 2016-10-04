@@ -48,7 +48,7 @@ namespace WebshopSite
 
         public static string OrderSummaryHtml(Order order)
         {
-            var html = "<div class=\"woocommerce\"><table class=\"shop_table cart\">" +
+            var html = "<div class=\"woocommerce\"><table class=\"shop_table cart col-md-6\">" +
             "<tr>" +
                 "<th class=\"product - name\">" +
                     "Product name"+
@@ -62,13 +62,15 @@ namespace WebshopSite
             "</tr>";
 
             var products = order.Products;
-            foreach (var product in products)
-            {
-                html += $"<tr class=\"cart_item\">" +
-                   $"<td class=\"product-name\">{product.ProductName}</td> "+
-                   $"<td class=\"product-quantity\">{product.Quantity}</td> " +
-                   $"<td class=\"product-price\">{product.Price}</td> " +
-                    "</tr>";
+            if (products != null) {
+                foreach (var product in products)
+                {
+                    html += $"<tr class=\"cart_item\">" +
+                       $"<td class=\"product-name\">{product.ProductName}</td> " +
+                       $"<td class=\"product-quantity\">{product.Quantity}</td> " +
+                       $"<td class=\"product-price\">{product.Price}</td> " +
+                        "</tr>";
+                }
             }
 
             html += "</table></div>";

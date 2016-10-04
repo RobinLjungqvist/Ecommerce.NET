@@ -9,7 +9,7 @@
     <div id="CheckoutContent" class="col-md-10" runat="server">
         <h2><%: Title %></h2>
         <div id="info" runat="server"></div>
-        <div id="checkout" visible="true">
+        <div id="checkout" visible="false" runat="server">
             <h4>Enter Credit Card information</h4>
             <div class="formcol">
                 <asp:label ID="lbl_ccn" runat="server" CssClass="reg_lbl" AssociatedControlID="txtbox_ccn">Credit Card Nr:</asp:label>
