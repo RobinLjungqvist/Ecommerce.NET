@@ -105,7 +105,7 @@ namespace WebshopSite
                                             $"<div class=\"product-upper\">" +
                                             $"<img src = \"../Images/testimage.png\" alt=\"image\">" +
                                             $"</div>" +
-                                            $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name}</a></h2>" +
+                                            $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name} {item.Color} {item.size}</a></h2>" +
                                             $"<div class=\"product-carousel-price\">" +
                                             $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
                                             $"</div>" +
@@ -163,7 +163,7 @@ namespace WebshopSite
                                             $"<div class=\"product-upper\">" +
                                             $"<img src = \"../Images/testimage.png\" alt=\"image\">" +
                                             $"</div>" +
-                                            $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name}</a></h2>" +
+                                            $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name} {item.Color} {item.size}</a></h2>" +
                                             $"<div class=\"product-carousel-price\">" +
                                             $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
                                             $"</div>" +
