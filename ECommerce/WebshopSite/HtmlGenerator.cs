@@ -128,7 +128,7 @@ namespace WebshopSite
                 html +=
                                         $"<tr class=\"cart_item\">" +
                                            $" <td class=\"product-remove\">" +
-                                                $"<a title=\"Remove this item\" class=\"remove\" href=\"#\">×</a>" +
+                                                $"<a title=\"Remove this item\" class=\"remove\" href=\"Cart.aspx?ProductToRemoveByID={item.ProductID}\">×</a>" +
                                             $"</td>" +
                                             $"<td class=\"product-thumbnail\">" +
                                                $"<a href=\"single-product.html\"><img width=\"145\" height=\"145\" alt=\"poster_1_up\" class=\"shop_thumbnail\" src=\"../Images/testimage.png\" ></a>" +
@@ -141,11 +141,14 @@ namespace WebshopSite
                                             $"</td>" +
                                             $"<td class=\"product-quantity\">" +
                                                 $"<div class=\"quantity buttons_added\">" +
-                                                    $"<input type=\"number\" size=\"4\" class=\"input-text qty text\" title=\"Qty\" value=\"{item.Quantity}\" min=\"0\" step=\"1\">" +
+                                                    $"<a class=\"minus\" value=\"-\" href=\"Cart.aspx?ProductID={item.ProductID}&UpdateQuantity={item.Quantity - 1}\">-</a> " +
+                                                    $"<input type=\"number\" size=\"4\"\" class=\"input-text qty text\" title=\"Qty\" value=\"{item.Quantity}\" min=\"0\" step=\"1\">" +
+                                                   $"<a class=\"plus\" value=\"+\" href=\"Cart.aspx?ProductID={item.ProductID}&UpdateQuantity={item.Quantity + 1}\">+</a> " +
                                                 $"</div>" +
                                             $"</td>" +
                                             $"<td class=\"product-subtotal\">" +
-                                                $"<span class=\"amount\">{item.Price * item.Quantity}</span>";
+                                          $"<span class=\"amount\">{item.Price * item.Quantity}</span>" +
+                                          "</td>";
             }
             return html;
         }

@@ -49,15 +49,6 @@ namespace WebshopSite.Sites {
         protected global::System.Web.UI.WebControls.TextBox txtbox_name;
         
         /// <summary>
-        /// txtbox_email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbox_email;
-        
-        /// <summary>
         /// txtbox_adress control.
         /// </summary>
         /// <remarks>
@@ -83,6 +74,24 @@ namespace WebshopSite.Sites {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtbox_zipcode;
+        
+        /// <summary>
+        /// ordertotalcontainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ordertotalcontainer;
+        
+        /// <summary>
+        /// ordertotalsum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ordertotalsum;
         
         /// <summary>
         /// btn_keepshopping control.

@@ -19,13 +19,15 @@ namespace WebshopSite
         {
 
             var cart = (List<OrderProduct>)Session["Cart"];
-            decimal totalcartsum = 0;
+            decimal totalCartsum = 0;
+            int itemCount = 0;
             foreach (var item in cart)
             {
-                totalcartsum += item.Price;
+                itemCount += item.Quantity;
+                totalCartsum += (item.Price * item.Quantity);
             }
 
-            shoppingcart.InnerHtml = $"<a href=\"Cart.aspx\">Cart <span class=\"cart-amunt\">{totalcartsum}kr</span><i class=\"fa fa-shopping-cart\"></i> <span class=\"product-count\">{cart.Count}</span></a>";
+            shoppingcart.InnerHtml = $"<a href=\"Cart.aspx\">Cart <span class=\"cart-amunt\">{totalCartsum}kr</span><i class=\"fa fa-shopping-cart\"></i> <span class=\"product-count\">{itemCount}</span></a>";
 
             if (Session["User"] == null)
             {

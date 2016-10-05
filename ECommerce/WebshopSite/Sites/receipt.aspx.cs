@@ -27,10 +27,12 @@ namespace WebshopSite.Sites
                 {
                     var user = (User)Session["User"];
                     txtbox_name.Text =  $"{user.FirstName} {user.LastName}";
-                    txtbox_email.Text = $"{user.StreetAdress}";
                     txtbox_adress.Text = $"{user.StreetAdress}";
                     txtbox_city.Text = $"{user.City}";
                     txtbox_zipcode.Text = $"{user.ZipCode}";
+
+                    ordertotalsum.InnerText = Convert.ToInt32(order.TotalPrice).ToString();
+                        
 
                     OrderDetails.InnerHtml = HtmlGenerator.OrderSummaryHtml(order);
                     OrderDetails.Visible = true;

@@ -28,7 +28,58 @@ namespace WebshopSite.Sites
                     products.Add(x);
                 }
             }
+            for (int i = 0; i < orderProds.Count; i++)
+            {
+                int tempcount = 0;
+                for (int j = 0; j < orderProds.Count; j++)
+                {
+                    if (orderProds[i].ProductID == orderProds[j].ProductID)
+                    {
+                        tempcount++;
+                        if (tempcount > 1)
+                        {
+                            orderProds.RemoveAt(j);
+                            j--;
+                            orderProds[i].Quantity = tempcount;
+                        }
+                    }
+                  
+                }
+            }
+            NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
+            if (!string.IsNullOrEmpty(Request.QueryString["UpdateQuantity"]))
+            {
+                for (int i = 0; i < orderProds.Count; i++)
+                {
+                    if (orderProds[i].ProductID == Convert.ToInt32(qscoll.Get("ProductID")))
+                    {
+                        if (Convert.ToInt32(qscoll.Get("UpdateQuantity")) < 1)
+                        {
+                            orderProds.RemoveAt(i);
+                            i--;
+                        }
+                        else
+                        {
+                            orderProds[i].Quantity = Convert.ToInt32(qscoll.Get("UpdateQuantity"));
+                        }
+                    }
+                }
 
+            }
+            if (!string.IsNullOrEmpty(Request.QueryString["ProductToRemoveByID"]))
+            {
+                for (int i = 0; i < orderProds.Count; i++)
+                {
+                    if (orderProds[i].ProductID == Convert.ToInt32(qscoll.Get("ProductToRemoveByID")))
+                    {
+                        
+                            orderProds.RemoveAt(i);
+                            i--;
+
+                    }
+                }
+
+            }
             var bllcategory = new BLLCategory();
             var categories = bllcategory.ReturnAllCategories();
             var sidebarhtml = HtmlGenerator.GetCategorySidebarHtml(categories);
