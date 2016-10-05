@@ -18,5 +18,22 @@ namespace BLL.Models
         public decimal? ppu { get; set; }
         public int? unitsInStock { get; set; }
         public string picture { get; set; }
+
+        public bool HasAssignedValues()
+        {
+            bool assignedValues = false;
+            if (category != null)
+                assignedValues = true;
+            if (brand != null)
+                assignedValues = true;
+            if (size != null)
+                assignedValues = true;
+            if (Color != null)
+                assignedValues = true;
+
+            return assignedValues;
+        }
+
     }
+    
 }

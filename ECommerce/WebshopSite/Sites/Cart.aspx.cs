@@ -88,5 +88,10 @@ namespace WebshopSite.Sites
 
             CartContainer.InnerHtml = html;
         }
+
+        protected void btn_proceedToCheckout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Checkout.aspx");
+        }
     }
 }

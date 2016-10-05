@@ -40,11 +40,12 @@ namespace WebshopSite.Sites
  
             productToDisplay = productList.FirstOrDefault();
             Session["SingleProduct"] = productToDisplay;
-            lbl_color.Text = $"Color: {productToDisplay.Color}";
-            lbl_size.Text = $"Size: { productToDisplay.size}";
+            lbl_color.Text = $"{productToDisplay.Color}";
+            lbl_size.Text = $" { productToDisplay.size}";
             lbl_productname.Text = $"{productToDisplay.name}";
+            lbl_price.Text = $"{productToDisplay.ppu}";
             description.InnerText = $"{productToDisplay.description}";
-            lbl_unitinstock.Text = $"Unit In Stock: {productToDisplay.unitsInStock}";
+            lbl_unitinstock.Text = $"{productToDisplay.unitsInStock}";
 
             var searchObject = new Product();
             searchObject.name = productToDisplay.name;

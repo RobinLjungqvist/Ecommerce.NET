@@ -91,12 +91,12 @@ namespace WebshopSite.Sites
             #endregion
 
 
-#region DynamicHtmlGenerationForSidebar
+            #region DynamicHtmlGenerationForSidebar
 
             var bllCategory = new BLLCategory();
             var prodlist = bllCategory.ReturnAllCategories();
             AsideContainer.InnerHtml = HtmlGenerator.GetCategorySidebarHtml(prodlist);
-#endregion
+        #endregion
 
         }
 
@@ -147,7 +147,10 @@ namespace WebshopSite.Sites
                 searchObject.category = ddl_category.SelectedValue;
             }
             var bll = new BLLProduct();
-            var searchResult = bll.SearchProduct(searchObject);
+            var searchResult = new List<Product>();
+            if (searchObject.HasAssignedValues()) { 
+            searchResult = bll.SearchProduct(searchObject);
+            }
             Session["SearchResult"] = searchResult;
 
 
