@@ -135,8 +135,19 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Images\JacobsTröjaRed.jpg" />
+    <Content Include="Images\KatrinasTröjaBlack.jpg" />
+    <Content Include="Images\LeonardosTröja Yellow.jpg" />
+    <Content Include="Images\LisasTröjaBlack1.jpg" />
+    <Content Include="Images\LisasTröjaBlack2.jpg" />
+    <Content Include="Images\LisasTröjaBlack3.jpg" />
+    <Content Include="Images\NissesTröjaRed.jpg" />
+    <Content Include="Images\RobinsJeansOrange1.jpg" />
+    <Content Include="Images\RobinsJeansOrange2.jpg" />
+    <Content Include="Images\RobinsJeansRed.jpg" />
+    <Content Include="Images\RobinsJeansYellow.jpg" />
+    <Content Include="Images\TruckerKepsRed.jpg" />
+    <Content Include="Sites\About.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -198,6 +209,7 @@
     <Content Include="Sites\MyAccount.aspx" />
     <Content Include="Sites\OrderHistory.aspx" />
     <Content Include="Sites\ProductsDisplay.aspx" />
+    <Content Include="Sites\receipt.aspx" />
     <Content Include="Sites\Registration.aspx" />
     <Content Include="Sites\SingleProductDisplay.aspx" />
     <Content Include="Style\Stylesheet.css" />
@@ -217,21 +229,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
+    <Compile Include="Sites\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
+    <Compile Include="Sites\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,6 +326,13 @@
     </Compile>
     <Compile Include="Sites\ProductsDisplay.aspx.designer.cs">
       <DependentUpon>ProductsDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\receipt.aspx.cs">
+      <DependentUpon>receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\receipt.aspx.designer.cs">
+      <DependentUpon>receipt.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sites\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>

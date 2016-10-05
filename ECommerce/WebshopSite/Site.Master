@@ -18,7 +18,7 @@
 <meta name="description" content="E-commerce School Project" />
 </head>
 <body role="presentation">
-    <form runat="server">
+    <form id="form" name="theform" runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -49,7 +49,9 @@
                             <li><a href="MyAccount.aspx"><i class="fa fa-user"></i> My Account</a></li>
                             <li><a href="Cart.aspx"><i class="fa fa-user"></i>My Cart</a></li>
                             <li><a href="Checkout.aspx"><i class="fa fa-user"></i> Checkout</a></li>
-                            <li><a href="Login.aspx"><i class="fa fa-user"></i> Login</a></li>
+                            <li><asp:LinkButton id="topnavlogin" href="Login.aspx" runat="server" visible="false"><i class="fa fa-user"></i> Login</asp:LinkButton></li>
+                            <li><asp:LinkButton id="topnavlogout" runat="server" visible="false" OnClick="topnavlogout_Click"><i class="fa fa-user"></i> Logout</asp:LinkButton></li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -89,8 +91,8 @@
                         <li><a href="Home.aspx">Home</a></li>
                         <li><a href="ProductsDisplay.aspx?Category=Nyheter">Products</a></li>
                         <li><a href="Cart.aspx">Cart</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="Checkout.aspx">Checkout</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
                     </ul>
                 </div>  
             </div>

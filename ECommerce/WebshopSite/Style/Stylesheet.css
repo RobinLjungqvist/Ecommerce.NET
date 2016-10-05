@@ -1072,8 +1072,10 @@ html, body{
 .text_box{
     display: inline-block;
     position:absolute;
-    height: 25px;
+    height: 10px;
+    width: 200px;
     left: 120px;
+    margin-top: 0px;
 }
 .formbtn{
     position:relative;
@@ -1082,6 +1084,7 @@ html, body{
 }
 .formcol{
     margin: auto auto;
+    margin-bottom: 3px;
 }
 .footerinfo{
     margin: auto;
@@ -1102,5 +1105,33 @@ html, body{
     font-size:x-large;
     font-weight: bold;
 }
+.validation{
+    display: inline-block;
+    position:absolute;
+    height: 10px;
+    left: 340px;
+    margin-top: 0px;
+}
+.updatemsg{
+    display: inline-block;
+    position:absolute;
+    left: 330px;
+    margin-top: 18px;
+}
+.btn_keepshopping{
+    margin-left: 240px;
+}
+#lbl_ordertotal{
+    font-size:larger;
+    margin-left: 240px;
+}
+#MainContent_ordertotalsum{
+    font-weight:bold;
+    font-size:large;
+    margin-left: 10px;
+
+
+}
+
 
  

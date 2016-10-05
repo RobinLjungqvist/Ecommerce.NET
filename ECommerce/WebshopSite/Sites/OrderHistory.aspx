@@ -16,7 +16,7 @@
             function ShowProducts(id) {
                 elements = document.getElementsByClassName('hiddentable');
                 for (var i = 0; i < elements.length; i++) {
-                    elements[i].style.display = "none";
+                    elements[i].style.display = 'none';
                 }
 
                 orderrowcolor = document.getElementsByClassName('corderrow');
@@ -25,10 +25,13 @@
                 }
 
 
-                element = document.getElementById('prodid' + id);
-                element.style.display = 'table-row';
                 element2 = document.getElementById('prodheadid' + id);
                 element2.style.display = 'table-row';
+
+                showelements = document.getElementsByClassName('show' + id);
+                for (var i = 0; i < showelements.length; i++) {
+                    showelements[i].style.display = 'table-row';
+                }
                 orderrow = document.getElementById('orderrow' + id);
                 orderrow.style.backgroundColor = '#00ebbd';
             }

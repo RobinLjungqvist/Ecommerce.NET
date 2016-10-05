@@ -36,7 +36,7 @@ namespace WebshopSite
                 {
                     var htmlProduct =
                         $"<tr id=\"prodheadid{order.OrderID}\" class=\"prodhead hiddentable\" style=\"display:none\"><td>Product ID</td><td>Product name</td><td>Quantity</td><td>Unit Price</td></tr>" +
-                        $"<tr id=\"prodid{order.OrderID}\" class=\"productrow hiddentable\" style=\"display:none\">" +
+                        $"<tr id=\"prodid{order.OrderID}\" class=\"productrow hiddentable show{order.OrderID}\" style=\"display:none\">" +
                        $"<td>{product.ProductID}</td><td><a href=\"SingleProductDisplay.aspx?ProductID={product.ProductID}\">{product.ProductName}</a></td><td> {product.Quantity}</td><td> {Convert.ToDecimal(product.Price)} kr </td>" +
                         "</tr>";
                     sb.Append(htmlProduct);
@@ -45,6 +45,38 @@ namespace WebshopSite
             sb.Append("</table></div>");
             return sb.ToString();
         }
+
+        public static string OrderSummaryHtml(Order order)
+        {
+            var html = "<div class=\"woocommerce\"><table class=\"shop_table cart col-md-6\">" +
+            "<tr>" +
+                "<th class=\"product - name\">" +
+                    "Product name"+
+                "</th>"+
+                "<th class=\"product-quantity\" >" +
+                    "Quantity"+
+                "</th>" +
+                "<th class=\"product-price\">" +
+                    "Price per Unit" +
+                "</th>" +
+            "</tr>";
+
+            var products = order.Products;
+            if (products != null) {
+                foreach (var product in products)
+                {
+                    html += $"<tr class=\"cart_item\">" +
+                       $"<td class=\"product-name\">{product.ProductName}</td> " +
+                       $"<td class=\"product-quantity\">{product.Quantity}</td> " +
+                       $"<td class=\"product-price\">{product.Price}</td> " +
+                        "</tr>";
+                }
+            }
+
+            html += "</table></div>";
+            return html;
+        }
+
         public static string GetCategorySidebarHtml(List<string> prodlist)
         {
             string html = $"<div class=\"col-md-2 offset-1\" id=\"CategoryContainer\" runat=\"server\">" +
