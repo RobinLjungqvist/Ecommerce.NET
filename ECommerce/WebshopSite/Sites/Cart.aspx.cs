@@ -49,21 +49,34 @@ namespace WebshopSite.Sites
             NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
             if (!string.IsNullOrEmpty(Request.QueryString["UpdateQuantity"]))
             {
-
-                foreach (var item in orderProds)
+                for (int i = 0; i < orderProds.Count; i++)
                 {
-                    if (item.ProductID == Convert.ToInt32(qscoll.Get("ProductID")))
+                    if (orderProds[i].ProductID == Convert.ToInt32(qscoll.Get("ProductID")))
                     {
                         if (Convert.ToInt32(qscoll.Get("UpdateQuantity")) < 1)
                         {
-                            orderProds.Remove(item);
+                            orderProds.RemoveAt(i);
+                            i--;
                         }
                         else
                         {
-                            item.Quantity = Convert.ToInt32(qscoll.Get("UpdateQuantity"));
+                            orderProds[i].Quantity = Convert.ToInt32(qscoll.Get("UpdateQuantity"));
                         }
                     }
+                }
 
+            }
+            if (!string.IsNullOrEmpty(Request.QueryString["ProductToRemoveByID"]))
+            {
+                for (int i = 0; i < orderProds.Count; i++)
+                {
+                    if (orderProds[i].ProductID == Convert.ToInt32(qscoll.Get("ProductToRemoveByID")))
+                    {
+                        
+                            orderProds.RemoveAt(i);
+                            i--;
+
+                    }
                 }
 
             }

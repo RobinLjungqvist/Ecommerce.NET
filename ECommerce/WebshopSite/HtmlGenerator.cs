@@ -128,7 +128,7 @@ namespace WebshopSite
                 html +=
                                         $"<tr class=\"cart_item\">" +
                                            $" <td class=\"product-remove\">" +
-                                                $"<a title=\"Remove this item\" class=\"remove\" href=\"#\">×</a>" +
+                                                $"<a title=\"Remove this item\" class=\"remove\" href=\"Cart.aspx?ProductToRemoveByID={item.ProductID}\">×</a>" +
                                             $"</td>" +
                                             $"<td class=\"product-thumbnail\">" +
                                                $"<a href=\"single-product.html\"><img width=\"145\" height=\"145\" alt=\"poster_1_up\" class=\"shop_thumbnail\" src=\"../Images/testimage.png\" ></a>" +
