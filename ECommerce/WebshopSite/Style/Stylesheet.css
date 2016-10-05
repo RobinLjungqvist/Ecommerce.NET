@@ -1121,5 +1121,17 @@ html, body{
 .btn_keepshopping{
     margin-left: 240px;
 }
+#lbl_ordertotal{
+    font-size:larger;
+    margin-left: 240px;
+}
+#MainContent_ordertotalsum{
+    font-weight:bold;
+    font-size:large;
+    margin-left: 10px;
+
+
+}
+
 
  
