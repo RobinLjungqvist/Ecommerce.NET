@@ -24,23 +24,41 @@ namespace WebshopSite.Sites
             NameValueCollection qscoll = HttpUtility.ParseQueryString(Page.ClientQueryString);
 
             #region URLChecksAndHandling
-            if (string.IsNullOrEmpty(Request.QueryString["Category"]))
+            if (string.IsNullOrEmpty(Request.QueryString["Search"]))
             {
-                productList = bll.GetNewestProducts();
-                category = "nyheter";
+                if (string.IsNullOrEmpty(Request.QueryString["Category"]))
+                {
+                    productList = bll.GetNewestProducts();
+                    category = "nyheter";
 
-            }
-            else if (qscoll.Get("Category").ToLower() == "nyheter" || qscoll == null)
-            {
-                productList = bll.GetNewestProducts();
-                category = qscoll.Get("Category");
+                }
+                else if (qscoll.Get("Category").ToLower() == "nyheter" || qscoll == null)
+                {
+                    productList = bll.GetNewestProducts();
+                    category = qscoll.Get("Category");
+                }
+                else
+                {
+                    productToDisplay.category = qscoll.Get("Category");
+                    productList = bll.SearchProduct(productToDisplay);
+                    category = qscoll.Get("Category");
+                }
+
+                
+
+                var html = HtmlGenerator.GetProductsHtml(productList, category);
+                ProductContainer.InnerHtml = html;
             }
             else
             {
-                productToDisplay.category = qscoll.Get("Category");
-                productList = bll.SearchProduct(productToDisplay);
-                category = qscoll.Get("Category");
+                var searchResult = (List<Product>)Session["SearchResult"];
+                if(searchResult != null)
+                { 
+                var searchHtml = HtmlGenerator.GetProductsHtmlbySearch(searchResult);
+                    ProductContainer.InnerHtml = searchHtml;
+                }
             }
+            
 
             if (!string.IsNullOrEmpty(Request.QueryString["AddToCart"]))
             {
@@ -65,15 +83,74 @@ namespace WebshopSite.Sites
             }
             #endregion
 
-            #region DynamicHtmlGeneration
+            #region dropboxes
 
-            var html = HtmlGenerator.GetProductsHtml(productList, category);
-            ProductContainer.InnerHtml = html;
+            FillDropDownLists();
+
+
+            #endregion
+
+
+#region DynamicHtmlGenerationForSidebar
 
             var bllCategory = new BLLCategory();
             var prodlist = bllCategory.ReturnAllCategories();
             AsideContainer.InnerHtml = HtmlGenerator.GetCategorySidebarHtml(prodlist);
 #endregion
+
+        }
+
+        private void FillDropDownLists()
+        {
+            if (!ddl_color.Items.Contains(new ListItem("--Color--")))
+                ddl_color.Items.Add("--Color--");
+            if (!ddl_size.Items.Contains(new ListItem("--Size--")))
+                ddl_size.Items.Add("--Size--");
+            if (!ddl_brand.Items.Contains(new ListItem("--Brand--")))
+                ddl_brand.Items.Add("--Brand--");
+            if (!ddl_category.Items.Contains(new ListItem("--Category--")))
+                ddl_category.Items.Add("--Category--");
+            var bll = new BLLGeneral();
+
+            bll.ReturnAllCategories().ForEach(x => ddl_category.Items.Add(new ListItem($"{x}")));
+            bll.ReturnAllBrands().ForEach(x => ddl_brand.Items.Add(new ListItem($"{x}")));
+            bll.ReturnAllColors().ForEach(x => ddl_color.Items.Add(new ListItem($"{x}")));
+            bll.ReturnAllSizes().ForEach(x => ddl_size.Items.Add(new ListItem($"{x}")));
+
+
+
+        }
+
+        protected void btn_search_Click(object sender, EventArgs e)
+        {
+            SetSearchObject();
+            Response.Redirect("ProductsDisplay.aspx?Search=True");
+        }
+
+        private void SetSearchObject()
+        {
+            var searchObject = new Product();
+            if(ddl_brand.SelectedValue != "--Brand--")
+            {
+                searchObject.brand = ddl_brand.SelectedValue;
+            }
+            if (ddl_size.SelectedValue != "--Size--")
+            {
+                searchObject.size = ddl_size.SelectedValue;
+            }
+            if (ddl_color.SelectedValue != "--Color--")
+            {
+                searchObject.Color = ddl_color.SelectedValue;
+            }
+            if (ddl_category.SelectedValue != "--Category--")
+            {
+                searchObject.category = ddl_category.SelectedValue;
+            }
+            var bll = new BLLProduct();
+            var searchResult = bll.SearchProduct(searchObject);
+            Session["SearchResult"] = searchResult;
+
+
         }
     }
 }

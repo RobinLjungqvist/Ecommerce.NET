@@ -34,7 +34,7 @@ namespace WebshopSite.Sites
             {
                 var login = "<a ID =\"login\" runat =\"server\" href=\"Login.aspx\">login</a>";
                 var register = "<a ID =\"register\" runat =\"server\" href=\"Registration.aspx\">register</a>";
-                info.InnerHtml += $"<h4>Please {login} or {register} in to place an order.</h4><br />";
+                info.InnerHtml += $"<h4>Please {login} or {register} to place an order.</h4><br />";
             }
         }
 

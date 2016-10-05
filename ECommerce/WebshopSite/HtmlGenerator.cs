@@ -149,5 +149,32 @@ namespace WebshopSite
             }
             return html;
         }
+        public static string GetProductsHtmlbySearch(List<Product> productList)
+        {
+            var html = string.Empty;
+
+            foreach (var item in productList)
+            {
+                html += $"<div class=\"col-md-3 col-sm-6 productdisplay\">" +
+                                            $"<div class=\"single-shop-product\">" +
+                                            $"<div class=\"product-upper\">" +
+                                            $"<img src = \"../Images/testimage.png\" alt=\"image\">" +
+                                            $"</div>" +
+                                            $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name}</a></h2>" +
+                                            $"<div class=\"product-carousel-price\">" +
+                                            $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
+                                            $"</div>" +
+
+                                            $"<div class=\"product-option-shop\">" +
+                                            $"<a class=\"add_to_cart_button\" data-quantity=\"1\" data-product_sku=\"\" data-product_id=\"70\" rel=\"nofollow\" href=\"ProductsDisplay.aspx?Search=True&AddToCart={item.productID}\">Add to cart</a>" +
+                                            $"</div>" +
+                                            $"</div>" +
+                                            $"</div>" +
+                                            $"";
+
+            }
+
+            return html;
+        }
     }
 }
