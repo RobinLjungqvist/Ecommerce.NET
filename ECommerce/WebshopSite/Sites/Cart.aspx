@@ -22,7 +22,6 @@
                                    <tbody id="CartContainer" runat="server"></tbody>
                                          <tr>
                                             <td class="actions" colspan="6">
-                                                <input type="submit" value="Update Cart" name="update_cart" class="button" style="float:left;">
                                                 <input type="submit" value="Proceed to Checkout" name="proceed" class="checkout-button button alt wc-forward" style="float:right;"/>
                                             </td>
                                         </tr>
