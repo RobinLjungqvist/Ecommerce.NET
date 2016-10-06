@@ -28,6 +28,25 @@ namespace WebshopSite.Sites
                 else
                 {
                     checkout.Visible = true;
+                    var orderProds = (List<OrderProduct>)Session["Cart"];
+                    for (int i = 0; i < orderProds.Count; i++)
+                    {
+                        int tempcount = 0;
+                        for (int j = 0; j < orderProds.Count; j++)
+                        {
+                            if (orderProds[i].ProductID == orderProds[j].ProductID)
+                            {
+                                tempcount++;
+                                if (tempcount > 1)
+                                {
+                                    orderProds.RemoveAt(j);
+                                    j--;
+                                    orderProds[i].Quantity = tempcount;
+                                }
+                            }
+
+                        }
+                    }
                 }
             }
             else
