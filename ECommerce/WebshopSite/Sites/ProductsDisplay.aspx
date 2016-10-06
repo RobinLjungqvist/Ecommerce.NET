@@ -9,7 +9,13 @@
 </div>
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+    <div id="searchbox" class="col-md-10" runat="server">
+        <asp:DropDownList ID="ddl_category" CssClass="dropdown" runat="server"> </asp:DropDownList>
+        <asp:DropDownList ID="ddl_brand" CssClass="dropdown" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="ddl_color" CssClass="dropdown" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="ddl_size" CssClass="dropdown" runat="server"></asp:DropDownList>
+        <asp:Button ID="btn_search"  runat="server" Text="Search" OnClick="btn_search_Click" />
+    </div>
 
 
         <div class="col-md-10" id="ProductContainer" runat="server">

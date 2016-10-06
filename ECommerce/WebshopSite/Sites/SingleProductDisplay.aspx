@@ -21,11 +21,12 @@
             <div id="right" class="col-md-3 col-sm-12">
             <asp:Label ID="lbl_description" runat="server">Description</asp:Label>
             <p id="description" runat="server"></p>
-            <asp:Label ID="lbl_size" runat="server"></asp:Label><br />
-            <asp:Label ID="lbl_color" runat="server"></asp:Label>
+            <label>Size:</label><asp:Label ID="lbl_size" runat="server"></asp:Label><br />
+            <label>Color:</label><asp:Label ID="lbl_color" runat="server"></asp:Label><br />
+            <label>Price:</label><asp:Label ID="lbl_price" runat="server"></asp:Label>
                 
             <br />
-            <asp:Label ID="lbl_unitinstock" runat="server">[lbl_unitinstock]</asp:Label>
+            <label>Units In Stock:</label><asp:Label ID="lbl_unitinstock" runat="server">[lbl_unitinstock]</asp:Label>
             <br />
             <br />
             <div id="choicecontainer" runat="server">

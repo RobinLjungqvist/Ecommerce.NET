@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BLLCategory.cs" />
     <Compile Include="BLLCity.cs" />
+    <Compile Include="BLLGeneral.cs" />
     <Compile Include="BLLOrder.cs" />
     <Compile Include="BLLProduct.cs" />
     <Compile Include="BLLUser.cs" />

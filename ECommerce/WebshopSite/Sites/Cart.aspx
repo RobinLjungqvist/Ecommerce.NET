@@ -22,7 +22,7 @@
                                    <tbody id="CartContainer" runat="server"></tbody>
                                          <tr>
                                             <td class="actions" colspan="6">
-                                                <input type="submit" value="Proceed to Checkout" name="proceed" class="checkout-button button alt wc-forward" style="float:right;"/>
+                                                <asp:Button runat="server" Text="Proceed to Checkout" name="proceed" class="checkout-button button alt wc-forward" style="float:right;" ID="btn_proceedToCheckout" OnClick="btn_proceedToCheckout_Click"/>
                                             </td>
                                         </tr>
                                 </table>

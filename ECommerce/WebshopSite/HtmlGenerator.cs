@@ -105,7 +105,7 @@ namespace WebshopSite
                                             $"<div class=\"product-upper\">" +
                                             $"<img src = \"../Images/testimage.png\" alt=\"image\">" +
                                             $"</div>" +
-                                            $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name}</a></h2>" +
+                                            $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name} {item.Color} {item.size}</a></h2>" +
                                             $"<div class=\"product-carousel-price\">" +
                                             $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
                                             $"</div>" +
@@ -134,7 +134,7 @@ namespace WebshopSite
                                                $"<a href=\"single-product.html\"><img width=\"145\" height=\"145\" alt=\"poster_1_up\" class=\"shop_thumbnail\" src=\"../Images/testimage.png\" ></a>" +
                                             $"</td>" +
                                             $"<td class=\"product-name\">" +
-                                                $"<a href=\"single-product.html\">{item.ProductName}</a>" +
+                                                $"<a href=\"SingleProductDisplay.aspx?ProductID={item.ProductID}\">{item.ProductName}</a>" +
                                             $"</td>" +
                                             $"<td class=\"product-price\">" +
                                                 $"<span class=\"amount\">{item.Price}</span>" +
@@ -150,6 +150,33 @@ namespace WebshopSite
                                           $"<span class=\"amount\">{item.Price * item.Quantity}</span>" +
                                           "</td>";
             }
+            return html;
+        }
+        public static string GetProductsHtmlbySearch(List<Product> productList)
+        {
+            var html = string.Empty;
+
+            foreach (var item in productList)
+            {
+                html += $"<div class=\"col-md-3 col-sm-6 productdisplay\">" +
+                                            $"<div class=\"single-shop-product\">" +
+                                            $"<div class=\"product-upper\">" +
+                                            $"<img src = \"../Images/testimage.png\" alt=\"image\">" +
+                                            $"</div>" +
+                                            $"<h2><a href = \"SingleProductDisplay.aspx?ProductID={item.productID}\" > {item.name} {item.Color} {item.size}</a></h2>" +
+                                            $"<div class=\"product-carousel-price\">" +
+                                            $"<ins>{Convert.ToInt32(item.ppu)}kr</ins>" +
+                                            $"</div>" +
+
+                                            $"<div class=\"product-option-shop\">" +
+                                            $"<a class=\"add_to_cart_button\" data-quantity=\"1\" data-product_sku=\"\" data-product_id=\"70\" rel=\"nofollow\" href=\"ProductsDisplay.aspx?Search=True&AddToCart={item.productID}\">Add to cart</a>" +
+                                            $"</div>" +
+                                            $"</div>" +
+                                            $"</div>" +
+                                            $"";
+
+            }
+
             return html;
         }
     }
